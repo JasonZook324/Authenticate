@@ -1,0 +1,115 @@
+@model List<Authenticate.Data.Entities.Menu>
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="text-center mb-4">
+                <h1 class="display-6">Add Menu Item</h1>
+                <p class="text-muted">Create a new navigation entry.</p>
+            </div>
+
+            @if (TempData["Message"] is string msg)
+            {
+                <div class="alert @(TempData["MessageClass"] ?? "alert-info") alert-dismissible fade show" role="alert">
+                    @msg
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            <form method="post" action="/Admin/AddMenu" class="card p-3 shadow-sm mb-4">
+                @Html.AntiForgeryToken()
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input id="name" name="name" class="form-control" placeholder="e.g. Dashboard" required />
+                </div>
+                <div class="mb-3">
+                    <label for="target" class="form-label">Target (URL)</label>
+                    <input id="target" name="target" class="form-control" placeholder="/dashboard" required />
+                </div>
+                <div class="mb-3">
+                    <label for="weight" class="form-label">Weight</label>
+                    <input id="weight" name="weight" type="number" class="form-control" value="1" />
+                    <div class="form-text">Lower numbers appear first.</div>
+                </div>
+                <div class="form-check mb-3">
+                    <input id="isActive" name="isActive" class="form-check-input" type="checkbox" value="true" checked />
+                    <input type="hidden" name="isActive" value="false" />
+                    <label class="form-check-label" for="isActive">Active</label>
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                    <a href="/" class="btn btn-outline-secondary">Cancel</a>
+                </div>
+            </form>
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h2 class="h5 mb-0">Existing Menu Items</h2>
+                <span class="text-muted">@((Model?.Count ?? 0)) total</span>
+            </div>
+
+            @if (Model != null && Model.Count > 0)
+            {
+                <div class="table-responsive">
+                    <table class="table table-sm align-middle">
+                        <thead>
+                            <tr>
+                                <th style="width: 18%">Name</th>
+                                <th>Target</th>
+                                <th style="width: 10%">Weight</th>
+                                <th style="width: 10%">Active</th>
+                                <th style="width: 18%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <input form="update-@item.Id" name="name" class="form-control form-control-sm" value="@item.Name" />
+                                    </td>
+                                    <td>
+                                        <input form="update-@item.Id" name="target" class="form-control form-control-sm" value="@item.Target" />
+                                    </td>
+                                    <td style="max-width: 100px;">
+                                        <input form="update-@item.Id" name="weight" type="number" class="form-control form-control-sm" value="@item.Weight" />
+                                    </td>
+                                    <td class="text-center">
+                                        <input form="update-@item.Id" name="isActive" class="form-check-input" type="checkbox" value="true" @(item.IsActive ? "checked" : "") />
+                                        <input form="update-@item.Id" type="hidden" name="isActive" value="false" />
+                                    </td>
+                                    <td class="text-end">
+                                        <form id="update-@item.Id" method="post" action="/Admin/UpdateMenu" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                        </form>
+                                        <form id="delete-@item.Id" method="post" action="/Admin/DeleteMenu" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                        </form>
+                                        <div class="btn-group btn-group-sm">
+                                            <button type="submit" class="btn btn-success" form="update-@item.Id">Save</button>
+                                            <button type="submit"
+                                                    class="btn btn-outline-danger"
+                                                    form="delete-@item.Id"
+                                                    onclick="return confirm('Delete this menu item?');">
+                                                Delete
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-light border">No menu items yet.</div>
+            }
+        </div>
+    </div>
+</div>

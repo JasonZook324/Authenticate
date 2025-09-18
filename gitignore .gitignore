@@ -1,0 +1,48 @@
+# Environment/secrets
+.env
+.env.local
+.env.*.local
+
+# Visual Studio / IDE
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+.idea/
+
+# Build outputs
+**/bin/
+**/obj/
+
+# Test results / coverage / logs
+TestResults/
+coverage/
+*.log
+logs/
+LogFiles/
+
+# Publish artifacts
+artifacts/
+publish/
+
+# Client-side
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# LibMan restored assets (keep libman.json)
+wwwroot/lib/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Publish profiles (user-scoped secrets)
+*.pubxml.user
+Properties/PublishProfiles/*.pubxml.user

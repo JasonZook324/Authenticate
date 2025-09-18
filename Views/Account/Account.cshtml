@@ -1,0 +1,82 @@
+﻿@using Microsoft.EntityFrameworkCore
+@using System.Security.Claims
+@inject Authenticate.Data.ApplicationDbContext Db
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Account";
+    var isAuth = User?.Identity?.IsAuthenticated ?? false;
+}
+
+<h1 class="mb-3">Account</h1>
+
+@if (TempData["Message"] is string msg)
+{
+    var css = TempData["MessageClass"] as string ?? "alert-info";
+    <div class="alert @css alert-dismissible fade show" role="alert">
+        @msg
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+@if (!isAuth)
+{
+    <div class="alert alert-warning">Please <a href="/Account/Login">sign in</a> to manage your profile.</div>
+}
+else
+{
+    var userIdStr = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+    int.TryParse(userIdStr, out var userId);
+
+    // Load existing Person for this user (if any)
+    var person = await Db.Set<Authenticate.Data.Entities.Person>()
+        .FirstOrDefaultAsync(p => p.UserId == userId);
+
+    // Load the user's email (first email if multiple)
+    var userEmail = await Db.Emails
+        .Include(e => e.User)
+        .FirstOrDefaultAsync(e => e.User != null && e.User.Id == userId);
+    <div class="card">
+        <div class="card-header">Email address</div>
+        <div class="card-body">
+            <form method="post" action="/Account/SaveEmail">
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" name="email" type="email" class="form-control" value="@(userEmail?.EmailAddress ?? string.Empty)" />
+                    <div class="form-text">
+                        @(userEmail == null ? "No email on file." : userEmail.IsVerified ? "Verified" : "Not verified")
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save email</button>
+            </form>
+        </div>
+    </div>
+    <div class="card mb-4">
+        <div class="card-header">Your profile</div>
+        <div class="card-body">
+            <form method="post" action="/Account/SavePerson">
+                @Html.AntiForgeryToken()
+
+                <input type="hidden" name="id" value="@(person?.Id ?? 0)" />
+
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First name</label>
+                    <input id="firstName" name="firstName" class="form-control" value="@(person?.FirstName ?? string.Empty)" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last name</label>
+                    <input id="lastName" name="lastName" class="form-control" value="@(person?.LastName ?? string.Empty)" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+
+   
+}
+

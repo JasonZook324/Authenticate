@@ -1,0 +1,231 @@
+@using Microsoft.EntityFrameworkCore
+@inject Authenticate.Data.ApplicationDbContext Db
+@{
+    Layout = null;
+    List<Authenticate.Data.Entities.Menu>? menus = null;
+    try
+    {
+        menus = await Db.Menus
+            .Where(m => m.IsActive)
+            .OrderBy(m => m.Weight)
+            .ToListAsync();
+    }
+    catch (Exception)
+    {
+        menus = new List<Authenticate.Data.Entities.Menu>();
+    }
+
+    var leftMenus = menus?.Where(m => m.Weight < 0).ToList() ?? new List<Authenticate.Data.Entities.Menu>();
+    var centerMenus = menus?.Where(m => m.Weight == 0).ToList() ?? new List<Authenticate.Data.Entities.Menu>();
+    var rightMenus = menus?.Where(m => m.Weight > 0).ToList() ?? new List<Authenticate.Data.Entities.Menu>();
+    var isAuth = User?.Identity?.IsAuthenticated ?? false;
+    var isAdmin = isAuth && User.IsInRole("Admin");
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - MyApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* Center the zero-weight menu(s) exactly in the navbar on lg+ screens */
+        @@media (min-width: 992px) {
+            .navbar .container,
+            .navbar .container-fluid {
+                position: relative;
+            }
+            .navbar-nav-center {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="/">MyApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Left menus -->
+                <ul class="navbar-nav">
+                    @foreach (var item in leftMenus)
+                    {
+                        var name = item.Name ?? string.Empty;
+                        var target = item.Target ?? string.Empty;
+
+                        if (name.Equals("Logout", StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (isAuth)
+                            {
+                                <li class="nav-item">
+                                    <form method="post" action="@target" class="d-inline">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-link nav-link p-0">@name</button>
+                                    </form>
+                                </li>
+                            }
+                        }
+                        else if (name.Equals("Login", StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (!isAuth)
+                            {
+                                <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                            }
+                        }
+                        else if (name.Equals("Account", StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (isAuth)
+                            {
+                                <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                            }
+                        }
+                        else if (name.Equals("Dashboard", StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (isAuth && !isAdmin)
+                            {
+                                <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                            }
+                        }
+                        else if (name.Equals("Admin", StringComparison.OrdinalIgnoreCase) || name.Equals("Admin Dashboard", StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (isAdmin)
+                            {
+                                <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                            }
+                        }
+                        else
+                        {
+                            <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                        }
+                    }
+                </ul>
+
+                <!-- Center menus -->
+                @if (centerMenus.Count > 0)
+                {
+                    <ul class="navbar-nav navbar-nav-center">
+                        @foreach (var item in centerMenus)
+                        {
+                            var name = item.Name ?? string.Empty;
+                            var target = item.Target ?? string.Empty;
+
+                            if (name.Equals("Logout", StringComparison.OrdinalIgnoreCase))
+                            {
+                                if (isAuth)
+                                {
+                                    <li class="nav-item">
+                                        <form method="post" action="@target" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="btn btn-link nav-link p-0">@name</button>
+                                        </form>
+                                    </li>
+                                }
+                            }
+                            else if (name.Equals("Login", StringComparison.OrdinalIgnoreCase))
+                            {
+                                if (!isAuth)
+                                {
+                                    <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                                }
+                            }
+                            else if (name.Equals("Account", StringComparison.OrdinalIgnoreCase))
+                            {
+                                if (isAuth)
+                                {
+                                    <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                                }
+                            }
+                            else if (name.Equals("Dashboard", StringComparison.OrdinalIgnoreCase))
+                            {
+                                if (isAuth && !isAdmin)
+                                {
+                                    <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                                }
+                            }
+                            else if (name.Equals("Admin", StringComparison.OrdinalIgnoreCase) || name.Equals("Admin Dashboard", StringComparison.OrdinalIgnoreCase))
+                            {
+                                if (isAdmin)
+                                {
+                                    <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                                }
+                            }
+                            else
+                            {
+                                <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                            }
+                        }
+                    </ul>
+                }
+
+                <!-- Right menus -->
+                <ul class="navbar-nav ms-auto">
+                    @foreach (var item in rightMenus)
+                    {
+                        var name = item.Name ?? string.Empty;
+                        var target = item.Target ?? string.Empty;
+
+                        if (name.Equals("Logout", StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (isAuth)
+                            {
+                                <li class="nav-item">
+                                    <form method="post" action="@target" class="d-inline">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-link nav-link p-0">@name</button>
+                                    </form>
+                                </li>
+                            }
+                        }
+                        else if (name.Equals("Login", StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (!isAuth)
+                            {
+                                <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                            }
+                        }
+                        else if (name.Equals("Account", StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (isAuth)
+                            {
+                                <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                            }
+                        }
+                        else if (name.Equals("Dashboard", StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (isAuth && !isAdmin)
+                            {
+                                <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                            }
+                        }
+                        else if (name.Equals("Admin", StringComparison.OrdinalIgnoreCase) || name.Equals("Admin Dashboard", StringComparison.OrdinalIgnoreCase))
+                        {
+                            if (isAdmin)
+                            {
+                                <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                            }
+                        }
+                        else
+                        {
+                            <li class="nav-item"><a class="nav-link" href="@target">@name</a></li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        @RenderBody()
+    </main>
+    <footer class="bg-light text-center py-3 mt-4">
+        <span class="text-muted">&copy; @DateTime.Now.Year - MyApp</span>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
