@@ -35,6 +35,30 @@ builder.Services.AddControllersWithViews();
 
 // DB logging provider + filters to avoid EF self-logging loops
 builder.Services.AddHttpContextAccessor();
+
+// Determine DB logger minimum level from env (default Warning)
+var dbLoggerMinEnv = Environment.GetEnvironmentVariable("DB_LOGGER_MINLEVEL") ?? "Warning";
+var dbLoggerMinLevel = dbLoggerMinEnv.ToLowerInvariant() switch
+{
+    "trace" => LogLevel.Trace,
+    "debug" => LogLevel.Debug,
+    "information" => LogLevel.Information,
+    "warning" => LogLevel.Warning,
+    "error" => LogLevel.Error,
+    "critical" => LogLevel.Critical,
+    _ => LogLevel.Warning
+};
+
+// Register DbLoggerProvider with chosen minimum level
+builder.Services.AddSingleton<ILoggerProvider>(sp =>
+    new DbLoggerProvider(sp.GetRequiredService<IServiceScopeFactory>(), dbLoggerMinLevel));
+
+// Configure logging filters for this provider
+builder.Logging.AddFilter<DbLoggerProvider>(null, dbLoggerMinLevel);
+builder.Logging.AddFilter<DbLoggerProvider>("Microsoft.EntityFrameworkCore", LogLevel.None);
+builder.Logging.AddFilter<DbLoggerProvider>("Microsoft.EntityFrameworkCore.Database.Command", LogLevel.None);
+builder.Logging.AddFilter<DbLoggerProvider>("Microsoft.AspNetCore.Diagnostics", LogLevel.None);
+
 builder.Services.AddSingleton<ILoggerProvider, DbLoggerProvider>();
 builder.Logging.AddFilter<DbLoggerProvider>(null, LogLevel.Information);
 builder.Logging.AddFilter<DbLoggerProvider>("Microsoft.EntityFrameworkCore", LogLevel.None);
