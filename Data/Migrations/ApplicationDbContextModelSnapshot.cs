@@ -22,6 +22,266 @@ namespace Authenticate.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("Authenticate.Data.Entities.APITypes", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ApiName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<string>("DocumentationUrl")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("LastSyncedUtc")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("APITypes");
+                });
+
+            modelBuilder.Entity("Authenticate.Data.Entities.ApiCredential", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ApiTypeId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("AuthType")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("BaseUrl")
+                        .HasMaxLength(512)
+                        .HasColumnType("character varying(512)");
+
+                    b.Property<string>("CookieName")
+                        .HasMaxLength(128)
+                        .HasColumnType("character varying(128)");
+
+                    b.Property<DateTime>("CreatedAtUtc")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("EncryptedApiKey")
+                        .HasColumnType("text");
+
+                    b.Property<string>("EncryptedCookieValue")
+                        .HasColumnType("text");
+
+                    b.Property<string>("EncryptedPassword")
+                        .HasColumnType("text");
+
+                    b.Property<string>("EncryptedUsername")
+                        .HasColumnType("text");
+
+                    b.Property<string>("EspnLeagueId")
+                        .HasMaxLength(32)
+                        .HasColumnType("character varying(32)");
+
+                    b.Property<string>("EspnSeasonId")
+                        .HasMaxLength(32)
+                        .HasColumnType("character varying(32)");
+
+                    b.Property<bool>("IsVerified")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("character varying(128)");
+
+                    b.Property<string>("TokenHeaderName")
+                        .HasMaxLength(64)
+                        .HasColumnType("character varying(64)");
+
+                    b.Property<string>("TokenScheme")
+                        .HasMaxLength(32)
+                        .HasColumnType("character varying(32)");
+
+                    b.Property<DateTime>("UpdatedAtUtc")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime?>("VerifiedAtUtc")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApiTypeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ApiCredentials");
+                });
+
+            modelBuilder.Entity("Authenticate.Data.Entities.ApiCredentialCookie", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ApiCredentialId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("EncryptedValue")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("character varying(128)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApiCredentialId");
+
+                    b.ToTable("ApiCredentialCookies");
+                });
+
+            modelBuilder.Entity("Authenticate.Data.Entities.ApiTypeEndpoint", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ApiTypeId")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("Deprecated")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ExternalDocsUrl")
+                        .HasMaxLength(512)
+                        .HasColumnType("character varying(512)");
+
+                    b.Property<string>("Method")
+                        .IsRequired()
+                        .HasMaxLength(12)
+                        .HasColumnType("character varying(12)");
+
+                    b.Property<string>("OperationId")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)");
+
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasMaxLength(512)
+                        .HasColumnType("character varying(512)");
+
+                    b.Property<string>("Summary")
+                        .HasMaxLength(512)
+                        .HasColumnType("character varying(512)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ApiTypeId");
+
+                    b.ToTable("ApiTypeEndpoints");
+                });
+
+            modelBuilder.Entity("Authenticate.Data.Entities.ApiTypeEndpointParameter", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("EndpointId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Format")
+                        .HasMaxLength(64)
+                        .HasColumnType("character varying(64)");
+
+                    b.Property<string>("In")
+                        .IsRequired()
+                        .HasMaxLength(16)
+                        .HasColumnType("character varying(16)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(128)
+                        .HasColumnType("character varying(128)");
+
+                    b.Property<bool>("Required")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("SchemaJson")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Type")
+                        .HasMaxLength(64)
+                        .HasColumnType("character varying(64)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EndpointId");
+
+                    b.ToTable("ApiTypeEndpointParameters");
+                });
+
+            modelBuilder.Entity("Authenticate.Data.Entities.ApiTypeEndpointResponse", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ContentType")
+                        .HasMaxLength(128)
+                        .HasColumnType("character varying(128)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<int>("EndpointId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Format")
+                        .HasMaxLength(64)
+                        .HasColumnType("character varying(64)");
+
+                    b.Property<string>("SchemaJson")
+                        .HasColumnType("text");
+
+                    b.Property<string>("StatusCode")
+                        .HasMaxLength(16)
+                        .HasColumnType("character varying(16)");
+
+                    b.Property<string>("Type")
+                        .HasMaxLength(64)
+                        .HasColumnType("character varying(64)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EndpointId");
+
+                    b.ToTable("ApiTypeEndpointResponses");
+                });
+
             modelBuilder.Entity("Authenticate.Data.Entities.Email", b =>
                 {
                     b.Property<int>("Id")
@@ -232,6 +492,69 @@ namespace Authenticate.Migrations
                     b.ToTable("PersonUser");
                 });
 
+            modelBuilder.Entity("Authenticate.Data.Entities.ApiCredential", b =>
+                {
+                    b.HasOne("Authenticate.Data.Entities.APITypes", "ApiType")
+                        .WithMany()
+                        .HasForeignKey("ApiTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Authenticate.Data.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApiType");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Authenticate.Data.Entities.ApiCredentialCookie", b =>
+                {
+                    b.HasOne("Authenticate.Data.Entities.ApiCredential", "ApiCredential")
+                        .WithMany("Cookies")
+                        .HasForeignKey("ApiCredentialId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApiCredential");
+                });
+
+            modelBuilder.Entity("Authenticate.Data.Entities.ApiTypeEndpoint", b =>
+                {
+                    b.HasOne("Authenticate.Data.Entities.APITypes", "ApiType")
+                        .WithMany()
+                        .HasForeignKey("ApiTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApiType");
+                });
+
+            modelBuilder.Entity("Authenticate.Data.Entities.ApiTypeEndpointParameter", b =>
+                {
+                    b.HasOne("Authenticate.Data.Entities.ApiTypeEndpoint", "Endpoint")
+                        .WithMany("Parameters")
+                        .HasForeignKey("EndpointId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Endpoint");
+                });
+
+            modelBuilder.Entity("Authenticate.Data.Entities.ApiTypeEndpointResponse", b =>
+                {
+                    b.HasOne("Authenticate.Data.Entities.ApiTypeEndpoint", "Endpoint")
+                        .WithMany("Responses")
+                        .HasForeignKey("EndpointId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Endpoint");
+                });
+
             modelBuilder.Entity("Authenticate.Data.Entities.Email", b =>
                 {
                     b.HasOne("Authenticate.Data.Entities.User", "User")
@@ -276,6 +599,18 @@ namespace Authenticate.Migrations
                         .HasForeignKey("UsersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Authenticate.Data.Entities.ApiCredential", b =>
+                {
+                    b.Navigation("Cookies");
+                });
+
+            modelBuilder.Entity("Authenticate.Data.Entities.ApiTypeEndpoint", b =>
+                {
+                    b.Navigation("Parameters");
+
+                    b.Navigation("Responses");
                 });
 
             modelBuilder.Entity("Authenticate.Data.Entities.User", b =>

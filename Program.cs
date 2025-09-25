@@ -6,6 +6,9 @@ using Authenticate.Infrastructure.Logging;
 using Microsoft.Extensions.Logging;
 using Authenticate.Infrastructure.Email;
 using Microsoft.Extensions.Options;
+using Authenticate.Infrastructure.Gemini;
+using Authenticate.Infrastructure.ApiDocs;
+using Authenticate.Services.Testing;
 
 // Load environment variables from .env file
 Env.Load();
@@ -32,6 +35,14 @@ builder.Services
 
 // MVC
 builder.Services.AddControllersWithViews();
+
+// HTTP clients (for testing API credentials)
+builder.Services.AddHttpClient();
+builder.Services.AddSingleton<IApiCredentialTester, EspnTester>();
+builder.Services.AddSingleton<IApiCredentialTester, GeminiTester>();
+builder.Services.AddSingleton<IApiCredentialTester, DefaultTester>();
+builder.Services.AddSingleton<ApiCredentialTestService>();
+builder.Services.AddScoped<IApiDocIngestionService, OpenApiIngestionService>();
 
 // DB logging provider + filters to avoid EF self-logging loops
 builder.Services.AddHttpContextAccessor();
@@ -78,6 +89,19 @@ var smtpOptions = new SmtpOptions
 };
 builder.Services.AddSingleton<IOptions<SmtpOptions>>(_ => Options.Create(smtpOptions));
 builder.Services.AddSingleton<IEmailSender, SmtpEmailSender>();
+
+// Gemini options from environment
+var geminiOptions = new GeminiOptions
+{
+    BaseUrl = Environment.GetEnvironmentVariable("GEMINI_BASEURL")?.TrimEnd('/') 
+              ?? "https://generativelanguage.googleapis.com",
+    ApiKey = Environment.GetEnvironmentVariable("GEMINI_API_KEY")
+};
+builder.Services.AddSingleton(geminiOptions);
+builder.Services.AddHttpClient<IGeminiMetadataClient, GeminiMetadataClient>(client =>
+{
+    client.Timeout = TimeSpan.FromSeconds(15);
+});
 
 var app = builder.Build();
 

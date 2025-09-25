@@ -326,3 +326,7 @@ C:\Users\64515C\source\repos\LEARNING\Authenticate\bin\Debug\net9.0\zh-Hant\Micr
 C:\Users\64515C\source\repos\LEARNING\Authenticate\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
 C:\Users\64515C\source\repos\LEARNING\Authenticate\bin\Debug\net9.0\MailKit.dll
 C:\Users\64515C\source\repos\LEARNING\Authenticate\bin\Debug\net9.0\MimeKit.dll
+C:\Users\64515C\source\repos\LEARNING\Authenticate\obj\Debug\net9.0\Authenticate.sourcelink.json
+C:\Users\64515C\source\repos\LEARNING\Authenticate\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\64515C\source\repos\LEARNING\Authenticate\bin\Debug\net9.0\Microsoft.OpenApi.Readers.dll
+C:\Users\64515C\source\repos\LEARNING\Authenticate\bin\Debug\net9.0\SharpYaml.dll

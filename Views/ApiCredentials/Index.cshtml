@@ -1,0 +1,231 @@
+@model List<Authenticate.Models.ApiCredentialEditModel>
+@{
+    ViewData["Title"] = "API Credentials";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h1 class="h4 mb-0">API Credentials</h1>
+                <a class="btn btn-primary btn-sm" href="/ApiCredentials/Create">Add Credential</a>
+            </div>
+
+            @if (TempData["Message"] is string msg)
+            {
+                <div class="alert @(TempData["MessageClass"] ?? "alert-info") alert-dismissible fade show" role="alert">
+                    @msg
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            @if (Model?.Count > 0)
+            {
+                <div class="table-responsive">
+                    <table class="table table-sm align-middle">
+                        <thead>
+                            <tr>
+                                <th style="width:4%;"></th>
+                                <th style="width:24%;">Name</th>
+                                <th>Base URL</th>
+                                <th style="width:18%;">API Type</th>
+                                <th style="width:18%;">Secret</th>
+                                <th style="width:22%;"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var c in Model)
+                        {
+                            <tr data-id="@c.Id"
+                                data-name="@c.Name"
+                                data-baseurl="@c.BaseUrl"
+                                data-apitype="@c.ApiTypeName">
+                                <td class="text-center">
+                                    <input type="radio" name="selectedCredential" value="@c.Id" class="form-check-input select-cred" />
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span>@c.Name</span>
+                                        @if (c.IsVerified)
+                                        {
+                                            <span class="badge bg-success">Verified</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-secondary">Not verified</span>
+                                        }
+                                    </div>
+                                </td>
+                                <td>@c.BaseUrl</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span>@c.ApiTypeName</span>
+                                        @if (!string.IsNullOrWhiteSpace(c.ApiTypeDescription))
+                                        {
+                                            <button type="button"
+                                                    class="btn btn-sm btn-outline-info py-0 px-2"
+                                                    data-bs-toggle="tooltip"
+                                                    data-bs-placement="top"
+                                                    title="@c.ApiTypeDescription">
+                                                i
+                                            </button>
+                                        }
+                                    </div>
+                                </td>
+                                <td>@c.MaskedKey</td>
+                                <td class="text-end">
+                                    <a class="btn btn-outline-secondary btn-sm" href="/ApiCredentials/Edit/@c.Id">Edit</a>
+                                    <form method="post" action="/ApiCredentials/Test" class="d-inline">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@c.Id" />
+                                        <input type="hidden" name="returnUrl" value="/ApiCredentials" />
+                                        <button type="submit" class="btn btn-outline-primary btn-sm">Test</button>
+                                    </form>
+                                    <form method="post" action="/ApiCredentials/Delete" class="d-inline" onsubmit="return confirm('Delete this credential?');">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@c.Id" />
+                                        <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Endpoint test card (hidden until a row is selected) -->
+                <div id="endpointCard" class="card shadow-sm mt-3 d-none">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="card-title mb-0">
+                                Test endpoints
+                                <small class="text-muted" id="epCredName"></small>
+                            </h5>
+                            <span class="badge text-bg-light" id="epApiType"></span>
+                        </div>
+                        <div class="row g-3 align-items-end">
+                            <div class="col-md-4">
+                                <label class="form-label" for="epBaseUrl">Base URL</label>
+                                <input id="epBaseUrl" class="form-control" disabled />
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label" for="epPreset">Common endpoints</label>
+                                <select id="epPreset" class="form-select">
+                                    <option value="">Select an endpoint…</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label" for="epPath">Endpoint path</label>
+                                <input id="epPath" class="form-control" placeholder="/v1/models" />
+                                <div class="form-text">Override or refine the selected endpoint.</div>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 mt-3">
+                            <form id="epForm" method="post" action="/ApiCredentials/TestEndpoint" class="d-flex gap-2">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="id" id="epId" />
+                                <input type="hidden" name="returnUrl" value="/ApiCredentials" />
+                                <input type="hidden" name="endpointPath" id="epPathHidden" />
+                                <select name="method" id="epMethod" class="form-select form-select-sm" style="max-width:140px">
+                                    <option>GET</option>
+                                    <option>POST</option>
+                                    <option>HEAD</option>
+                                </select>
+                                <button type="submit" class="btn btn-primary btn-sm">Run</button>
+                            </form>
+                            <button type="button" class="btn btn-outline-secondary btn-sm" id="epHide">Hide</button>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-light border">No credentials yet.</div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Bootstrap tooltips
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
+
+  const card = document.getElementById('endpointCard');
+  const epId = document.getElementById('epId');
+  const epBaseUrl = document.getElementById('epBaseUrl');
+  const epCredName = document.getElementById('epCredName');
+  const epApiType = document.getElementById('epApiType');
+  const epPreset = document.getElementById('epPreset');
+  const epPath = document.getElementById('epPath');
+  const epPathHidden = document.getElementById('epPathHidden');
+  const epHide = document.getElementById('epHide');
+  const epMethod = document.getElementById('epMethod');
+
+  async function loadPresetsFromServer(credId) {
+    epPreset.innerHTML = '<option value="">Loading…</option>';
+    try {
+      const res = await fetch(`/ApiCredentials/EndpointPresets?id=${encodeURIComponent(credId)}`, { credentials: 'same-origin' });
+      if (!res.ok) throw new Error('Failed to load presets');
+      const data = await res.json();
+      epPreset.innerHTML = '';
+      data.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p.value;
+        opt.textContent = p.text;
+        if (p.method) opt.dataset.method = p.method;
+        epPreset.appendChild(opt);
+      });
+      if (epPreset.options.length > 0) {
+        epPreset.selectedIndex = 0;
+        epPath.value = epPreset.value;
+        const method = epPreset.options[0].dataset.method || 'GET';
+        epMethod.value = method;
+      } else {
+        epPath.value = '';
+      }
+    } catch {
+      epPreset.innerHTML = '<option value="">No presets available</option>';
+      epPath.value = '';
+    }
+    syncPathHidden();
+  }
+
+  function selectRow(row) {
+    const id = row.getAttribute('data-id');
+    const name = row.getAttribute('data-name') || '';
+    const baseUrl = row.getAttribute('data-baseurl') || '';
+    const apiType = row.getAttribute('data-apitype') || '';
+
+    epId.value = id;
+    epBaseUrl.value = baseUrl;
+    epCredName.textContent = `for "${name}"`;
+    epApiType.textContent = apiType || 'Unknown';
+
+    card.classList.remove('d-none');
+    loadPresetsFromServer(id);
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  document.querySelectorAll('.select-cred').forEach(r => {
+    r.addEventListener('change', (e) => {
+      if (!e.target.checked) return;
+      document.querySelectorAll('.select-cred').forEach(x => { if (x !== e.target) x.checked = false; });
+      selectRow(e.target.closest('tr'));
+    });
+  });
+
+  epPreset.addEventListener('change', () => {
+    epPath.value = epPreset.value || '';
+    const m = epPreset.selectedOptions[0]?.dataset.method;
+    if (m) epMethod.value = m;
+    syncPathHidden();
+  });
+
+  function syncPathHidden() { epPathHidden.value = epPath.value || ''; }
+  epPath.addEventListener('input', syncPathHidden);
+  epMethod.addEventListener('change', syncPathHidden);
+  document.getElementById('epForm').addEventListener('submit', () => syncPathHidden());
+  epHide.addEventListener('click', () => card.classList.add('d-none'));
+});
+</script>

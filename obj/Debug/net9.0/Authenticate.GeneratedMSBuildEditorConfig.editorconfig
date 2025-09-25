@@ -52,6 +52,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5EYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/ApiCredentials/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBpQ3JlZGVudGlhbHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/ApiCredentials/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBpQ3JlZGVudGlhbHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/ApiCredentials/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBpQ3JlZGVudGlhbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Dashboard/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

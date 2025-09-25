@@ -1,0 +1,206 @@
+@using Authenticate.Data.Entities
+@using Microsoft.AspNetCore.Mvc.Rendering
+@model Authenticate.Models.ApiCredentialEditModel
+@{
+    ViewData["Title"] = "Edit API Credential";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 col-lg-6 mx-auto">
+            <h1 class="h4 mb-3">Edit API Credential</h1>
+
+            @if (TempData["Message"] is string msg)
+            {
+                <div class="alert @(TempData["MessageClass"] ?? "alert-info") alert-dismissible fade show" role="alert">
+                    @msg
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+
+            <form method="post" action="/ApiCredentials/Edit" class="card p-3 shadow-sm mb-3" data-busy="Saving…">
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.Id)
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.Name, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control", required = "required", maxlength = "128" })
+                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.ApiTypeId, new { @class = "form-label" })
+                    @Html.DropDownListFor(m => m.ApiTypeId, Model.ApiTypeOptions, new { @class = "form-select", required = "required" })
+                    @Html.ValidationMessageFor(m => m.ApiTypeId, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.BaseUrl, new { @class = "form-label" })
+                    @Html.TextBoxFor(m => m.BaseUrl, new { @class = "form-control", maxlength = "512" })
+                    @Html.ValidationMessageFor(m => m.BaseUrl, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    @Html.LabelFor(m => m.AuthType, "Authentication", new { @class = "form-label" })
+                    @Html.DropDownListFor(
+                        m => m.AuthType,
+                        Html.GetEnumSelectList<ApiAuthType>(),
+                        new {
+                            @class = "form-select",
+                            id = "authType",
+                            // Use enum names so they match Html.GetEnumSelectList() values
+                            data_auth_bearer = nameof(ApiAuthType.BearerToken),
+                            data_auth_cookie = nameof(ApiAuthType.Cookie),
+                            data_auth_basic = nameof(ApiAuthType.Basic)
+                        })
+                </div>
+
+                <div class="mb-2">
+                    <label class="form-label">Current Secret</label>
+                    <input class="form-control" value="@Model.MaskedKey" disabled />
+                </div>
+
+                <div id="auth-token" class="border rounded p-2 mb-3">
+                    <div class="mb-2">
+                        @Html.LabelFor(m => m.NewApiKey, new { @class = "form-label" })
+                        @Html.PasswordFor(m => m.NewApiKey, new { @class = "form-control", autocomplete = "new-password" })
+                        @Html.ValidationMessageFor(m => m.NewApiKey, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="row g-2">
+                        <div class="col">
+                            @Html.LabelFor(m => m.TokenHeaderName, new { @class = "form-label" })
+                            @Html.TextBoxFor(m => m.TokenHeaderName, new { @class = "form-control", placeholder = "Authorization" })
+                        </div>
+                        <div class="col">
+                            @Html.LabelFor(m => m.TokenScheme, new { @class = "form-label" })
+                            @Html.TextBoxFor(m => m.TokenScheme, new { @class = "form-control", placeholder = "Bearer" })
+                        </div>
+                    </div>
+                    <div class="form-text">For Azure OpenAI, set Header Name to "api-key" and leave Scheme empty.</div>
+                </div>
+
+                <div id="auth-cookie" class="border rounded p-2 mb-3 d-none">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>Cookies</strong>
+                            <div class="form-text">Submitting non-empty cookies replaces the saved set. Leave empty to keep current cookies.</div>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="addCookie">Add cookie</button>
+                    </div>
+                    <div id="cookieList" class="mt-2">
+                        @for (int i = 0; i < Model.CookiePairs.Count; i++)
+                        {
+                            <div class="row g-2 mb-2 cookie-row">
+                                <div class="col-5">
+                                    <label class="form-label">Name</label>
+                                    <input name="CookiePairs[@i].Name" class="form-control" placeholder="sessionid" value="@(Model.CookiePairs[i].Name ?? "")" />
+                                </div>
+                                <div class="col-7">
+                                    <label class="form-label">Value (leave blank to skip replacing)</label>
+                                    <input name="CookiePairs[@i].Value" class="form-control" type="password" autocomplete="new-password" />
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div id="auth-basic" class="border rounded p-2 mb-3 d-none">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            @Html.LabelFor(m => m.Username, new { @class = "form-label" })
+                            @Html.TextBoxFor(m => m.Username, new { @class = "form-control", autocomplete = "username" })
+                            @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-6">
+                            @Html.LabelFor(m => m.NewPassword, new { @class = "form-label" })
+                            @Html.PasswordFor(m => m.NewPassword, new { @class = "form-control", autocomplete = "new-password" })
+                            @Html.ValidationMessageFor(m => m.NewPassword, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div id="espn-settings" class="border rounded p-2 mb-3 d-none">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            @Html.LabelFor(m => m.EspnSeasonId, new { @class = "form-label" })
+                            @Html.TextBoxFor(m => m.EspnSeasonId, new { @class = "form-control", placeholder = "2025", maxlength = "32" })
+                            @Html.ValidationMessageFor(m => m.EspnSeasonId, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-6">
+                            @Html.LabelFor(m => m.EspnLeagueId, new { @class = "form-label" })
+                            @Html.TextBoxFor(m => m.EspnLeagueId, new { @class = "form-control", placeholder = "1713644125", maxlength = "32" })
+                            @Html.ValidationMessageFor(m => m.EspnLeagueId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-text">These values are used to build ESPN API paths.</div>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <a class="btn btn-outline-secondary" href="/ApiCredentials">Cancel</a>
+                </div>
+            </form>
+
+            <form method="post" action="/ApiCredentials/Test" class="card p-3 shadow-sm" data-busy="Testing connection…">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="id" value="@Model.Id" />
+                <input type="hidden" name="returnUrl" value="@Url.Action("Edit", "ApiCredentials", new { id = Model.Id })" />
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>Test connection</strong>
+                        <div class="text-muted small">Tests the saved credential and Base URL. Save first if you changed it.</div>
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary">Test</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const sel = document.getElementById('authType');
+  const token = document.getElementById('auth-token');
+  const cookie = document.getElementById('auth-cookie');
+  const basic = document.getElementById('auth-basic');
+  const list = document.getElementById('cookieList');
+  const addBtn = document.getElementById('addCookie');
+  const apiTypeSelect = document.getElementById('ApiTypeId') || document.querySelector('select[name="ApiTypeId"]');
+  const espn = document.getElementById('espn-settings');
+
+  function sync() {
+    const v = sel.value; // Html.GetEnumSelectList() uses enum names as values
+    token.classList.toggle('d-none', v !== sel.dataset.authBearer);
+    cookie.classList.toggle('d-none', v !== sel.dataset.authCookie);
+    basic.classList.toggle('d-none', v !== sel.dataset.authBasic);
+  }
+  sel.addEventListener('change', sync);
+  sync();
+
+  function nextIndex() { return list.querySelectorAll('.cookie-row').length; }
+  addBtn?.addEventListener('click', () => {
+    const i = nextIndex();
+    const row = document.createElement('div');
+    row.className = 'row g-2 mb-2 cookie-row';
+    row.innerHTML = `
+      <div class="col-5">
+        <label class="form-label">Name</label>
+        <input name="CookiePairs[${i}].Name" class="form-control" placeholder="sessionid" />
+      </div>
+      <div class="col-7">
+        <label class="form-label">Value</label>
+        <input name="CookiePairs[${i}].Value" class="form-control" type="password" autocomplete="new-password" />
+      </div>`;
+    list.appendChild(row);
+  });
+
+  function syncEspn() {
+    const txt = apiTypeSelect?.selectedOptions?.[0]?.text?.toLowerCase() ?? '';
+    espn.classList.toggle('d-none', !txt.includes('espn'));
+  }
+  apiTypeSelect?.addEventListener('change', syncEspn);
+  syncEspn();
+});
+</script>

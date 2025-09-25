@@ -1,4 +1,4 @@
-@model List<Authenticate.Data.Entities.Menu>
+@model Authenticate.Models.AdminDashboardViewModel
 
 @{
     ViewData["Title"] = "Admin Dashboard";
@@ -48,10 +48,10 @@
 
             <div class="d-flex justify-content-between align-items-center mb-2">
                 <h2 class="h5 mb-0">Existing Menu Items</h2>
-                <span class="text-muted">@((Model?.Count ?? 0)) total</span>
+                <span class="text-muted">@((Model.Menus?.Count ?? 0)) total</span>
             </div>
 
-            @if (Model != null && Model.Count > 0)
+            @if (Model.Menus != null && Model.Menus.Count > 0)
             {
                 <div class="table-responsive">
                     <table class="table table-sm align-middle">
@@ -65,7 +65,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var item in Model)
+                            @foreach (var item in Model.Menus)
                             {
                                 <tr>
                                     <td>
@@ -109,6 +109,90 @@
             else
             {
                 <div class="alert alert-light border">No menu items yet.</div>
+            }
+
+            <hr class="my-4" />
+            <div class="text-center mb-3">
+                <h2 class="h5 mb-0">API Types</h2>
+                <p class="text-muted">Manage API Types and documentation ingestion.</p>
+            </div>
+
+            <form method="post" action="/Admin/AddApiType" class="card p-3 shadow-sm mb-3">
+                @Html.AntiForgeryToken()
+                <div class="mb-3">
+                    <label for="apiName" class="form-label">API Name</label>
+                    <input id="apiName" name="apiName" class="form-control" placeholder="e.g. OpenAI" required />
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description (optional)</label>
+                    <input id="description" name="description" class="form-control" placeholder="Short description" />
+                </div>
+                <div class="mb-3">
+                    <label for="documentationUrl" class="form-label">Documentation URL (OpenAPI/Swagger or Discovery)</label>
+                    <input id="documentationUrl" name="documentationUrl" class="form-control" placeholder="https://api.example.com/openapi.json" />
+                    <div class="form-text">Provide an OpenAPI/Swagger JSON/YAML or Google Discovery document URL to auto-import endpoints.</div>
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </form>
+
+            @if (Model.ApiTypes != null && Model.ApiTypes.Count > 0)
+            {
+                <div class="table-responsive">
+                    <table class="table table-sm align-middle">
+                        <thead>
+                            <tr>
+                                <th style="width: 22%">API Name</th>
+                                <th style="width: 30%">Documentation URL</th>
+                                <th>Description</th>
+                                <th style="width: 26%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var t in Model.ApiTypes)
+                            {
+                                <tr>
+                                    <td>
+                                        <input form="at-update-@t.Id" name="apiName" class="form-control form-control-sm" value="@t.ApiName" />
+                                    </td>
+                                    <td>
+                                        <input form="at-update-@t.Id" name="documentationUrl" class="form-control form-control-sm" value="@t.DocumentationUrl" placeholder="https://..." />
+                                        <small class="text-muted">Last synced: @(t.LastSyncedUtc?.ToString("u") ?? "never")</small>
+                                    </td>
+                                    <td>
+                                        <input form="at-update-@t.Id" name="description" class="form-control form-control-sm" value="@t.Description" />
+                                    </td>
+                                    <td class="text-end">
+                                        <form id="at-update-@t.Id" method="post" action="/Admin/UpdateApiType" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@t.Id" />
+                                        </form>
+                                        <form id="at-refresh-@t.Id" method="post" action="/Admin/RefreshApiType" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@t.Id" />
+                                        </form>
+                                        <form id="at-delete-@t.Id" method="post" action="/Admin/DeleteApiType" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@t.Id" />
+                                        </form>
+                                        <div class="btn-group btn-group-sm">
+                                            <button type="submit" class="btn btn-success" form="at-update-@t.Id">Save</button>
+                                            <button type="submit" class="btn btn-outline-primary" form="at-refresh-@t.Id">Refresh</button>
+                                            <button type="submit" class="btn btn-outline-danger" form="at-delete-@t.Id" onclick="return confirm('Delete this API Type?');">
+                                                Delete
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-light border">No API Types yet.</div>
             }
         </div>
     </div>
