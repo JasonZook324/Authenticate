@@ -1,113 +1,141 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\",
+  "WorkspaceRootPath": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\views\\apicredentials\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\apicredentials\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\views\\roster\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\roster\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\views\\apicredentials\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\apicredentials\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\controllers\\rostercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\rostercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\data\\entities\\apicredential.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\entities\\apicredential.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\controllers\\apicredentialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\apicredentialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\services\\testing\\testers\\espntester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\testers\\espntester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\models\\apicredentialsviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:models\\apicredentialsviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\services\\testing\\testers\\geminitester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\testers\\geminitester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\services\\testing\\testers\\defaulttester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\testers\\defaulttester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\services\\testing\\testers\\testerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\testers\\testerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\services\\testing\\apicredentialtestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\apicredentialtestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\services\\testing\\iapicredentialtester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\iapicredentialtester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\data\\entities\\apicredentialcookie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\entities\\apicredentialcookie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\views\\apicredentials\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\apicredentials\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\infrastructure\\apidocs\\openapiingestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:infrastructure\\apidocs\\openapiingestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\data\\entities\\apitypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\entities\\apitypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\controllers\\geminicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\geminicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:.env||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\views\\account\\account.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\account\\account.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\services\\nflteamsyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\nflteamsyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\controllers\\tank01controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\tank01controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\pages\\roster.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:pages\\roster.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\pages\\roster.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:pages\\roster.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\data\\entities\\nflteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\entities\\nflteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\data\\entities\\apicredential.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\entities\\apicredential.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\views\\apicredentials\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\apicredentials\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\views\\apicredentials\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\apicredentials\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\controllers\\apicredentialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\apicredentialscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\services\\testing\\testers\\espntester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\testers\\espntester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\models\\apicredentialsviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:models\\apicredentialsviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\services\\testing\\testers\\geminitester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\testers\\geminitester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\services\\testing\\testers\\defaulttester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\testers\\defaulttester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\services\\testing\\testers\\testerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\testers\\testerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\services\\testing\\apicredentialtestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\apicredentialtestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\services\\testing\\iapicredentialtester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\iapicredentialtester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\data\\entities\\apicredentialcookie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\entities\\apicredentialcookie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\views\\apicredentials\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\apicredentials\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\infrastructure\\apidocs\\openapiingestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:infrastructure\\apidocs\\openapiingestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\data\\entities\\apitypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\entities\\apitypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\controllers\\geminicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\geminicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\views\\account\\account.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\account\\account.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\jason\\onedrive\\desktop\\git\\authenticate\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -118,272 +146,377 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IApiCredentialTester.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\IApiCredentialTester.cs",
-              "RelativeDocumentMoniker": "Services\\Testing\\IApiCredentialTester.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\IApiCredentialTester.cs",
-              "RelativeToolTip": "Services\\Testing\\IApiCredentialTester.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RosterController.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Controllers\\RosterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RosterController.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Controllers\\RosterController.cs",
+              "RelativeToolTip": "Controllers\\RosterController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAYwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:06:42.47Z",
+              "WhenOpened": "2025-09-26T16:22:04.44Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Program.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAvwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T20:58:47.72Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApiCredentialsController.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\ApiCredentialsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ApiCredentialsController.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\ApiCredentialsController.cs",
-              "RelativeToolTip": "Controllers\\ApiCredentialsController.cs",
-              "ViewState": "AgIAAJoBAAAAAAAAAAAvwOMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwBsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T19:19:32.992Z",
+              "WhenOpened": "2025-09-24T19:19:02.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\Roster\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Roster\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\Roster\\Index.cshtml",
+              "RelativeToolTip": "Views\\Roster\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-26T16:21:57.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ApiCredential.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\Entities\\ApiCredential.cs",
-              "RelativeDocumentMoniker": "Data\\Entities\\ApiCredential.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\Entities\\ApiCredential.cs",
-              "RelativeToolTip": "Data\\Entities\\ApiCredential.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Data\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Data\\Entities\\User.cs",
+              "RelativeToolTip": "Data\\Entities\\User.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAjwAkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T18:28:47.535Z",
+              "WhenOpened": "2025-09-18T18:11:40.743Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApiCredentialsViewModels.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Models\\ApiCredentialsViewModels.cs",
-              "RelativeDocumentMoniker": "Models\\ApiCredentialsViewModels.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Models\\ApiCredentialsViewModels.cs",
-              "RelativeToolTip": "Models\\ApiCredentialsViewModels.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAuwHwAAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "NFLTeamSyncService.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\NFLTeamSyncService.cs",
+              "RelativeDocumentMoniker": "Services\\NFLTeamSyncService.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\NFLTeamSyncService.cs",
+              "RelativeToolTip": "Services\\NFLTeamSyncService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAQwDUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T19:19:20.836Z",
+              "WhenOpened": "2025-09-26T16:30:55.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\ApiCredentials\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\ApiCredentials\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\ApiCredentials\\Edit.cshtml",
-              "RelativeToolTip": "Views\\ApiCredentials\\Edit.cshtml",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAtwDkAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-24T19:20:09.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\ApiCredentials\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\ApiCredentials\\Create.cshtml",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\ApiCredentials\\Create.cshtml",
-              "RelativeToolTip": "Views\\ApiCredentials\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-24T20:40:35.092Z",
+              "DocumentIndex": 9,
+              "Title": "Roster.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Pages\\Roster.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Roster.cshtml.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Pages\\Roster.cshtml.cs",
+              "RelativeToolTip": "Pages\\Roster.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T16:20:22.139Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAcBAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-25T19:52:00.46Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EspnTester.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\Testers\\EspnTester.cs",
-              "RelativeDocumentMoniker": "Services\\Testing\\Testers\\EspnTester.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\Testers\\EspnTester.cs",
-              "RelativeToolTip": "Services\\Testing\\Testers\\EspnTester.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAcwBkAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Tank01Controller.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Controllers\\Tank01Controller.cs",
+              "RelativeDocumentMoniker": "Controllers\\Tank01Controller.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Controllers\\Tank01Controller.cs",
+              "RelativeToolTip": "Controllers\\Tank01Controller.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAIAwwE0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:07:03.119Z",
+              "WhenOpened": "2025-09-26T15:03:43.208Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ApiCredentialTestService.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\ApiCredentialTestService.cs",
-              "RelativeDocumentMoniker": "Services\\Testing\\ApiCredentialTestService.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\ApiCredentialTestService.cs",
-              "RelativeToolTip": "Services\\Testing\\ApiCredentialTestService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwA0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:06:47.942Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TesterBase.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\Testers\\TesterBase.cs",
-              "RelativeDocumentMoniker": "Services\\Testing\\Testers\\TesterBase.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\Testers\\TesterBase.cs",
-              "RelativeToolTip": "Services\\Testing\\Testers\\TesterBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:06:52.392Z",
+              "WhenOpened": "2025-09-24T20:32:21.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "DefaultTester.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\Testers\\DefaultTester.cs",
-              "RelativeDocumentMoniker": "Services\\Testing\\Testers\\DefaultTester.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\Testers\\DefaultTester.cs",
-              "RelativeToolTip": "Services\\Testing\\Testers\\DefaultTester.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:06:58.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GeminiTester.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\Testers\\GeminiTester.cs",
-              "RelativeDocumentMoniker": "Services\\Testing\\Testers\\GeminiTester.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\Testers\\GeminiTester.cs",
-              "RelativeToolTip": "Services\\Testing\\Testers\\GeminiTester.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:07:07.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ApiCredentialCookie.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\Entities\\ApiCredentialCookie.cs",
-              "RelativeDocumentMoniker": "Data\\Entities\\ApiCredentialCookie.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\Entities\\ApiCredentialCookie.cs",
-              "RelativeToolTip": "Data\\Entities\\ApiCredentialCookie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T18:42:33.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\ApiCredentials\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\ApiCredentials\\Index.cshtml",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\ApiCredentials\\Index.cshtml",
-              "RelativeToolTip": "Views\\ApiCredentials\\Index.cshtml",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwAAAAAA3AAAAAAAAAA==",
+              "Title": "Roster.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Pages\\Roster.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Roster.cshtml",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Pages\\Roster.cshtml",
+              "RelativeToolTip": "Pages\\Roster.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-24T20:48:52.291Z",
+              "WhenOpened": "2025-09-26T16:20:27.514Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADgvxoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T19:19:02.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "OpenApiIngestionService.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Infrastructure\\ApiDocs\\OpenApiIngestionService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\ApiDocs\\OpenApiIngestionService.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Infrastructure\\ApiDocs\\OpenApiIngestionService.cs",
-              "RelativeToolTip": "Infrastructure\\ApiDocs\\OpenApiIngestionService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T21:28:08.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 10,
               "Title": "AdminDashboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Admin\\AdminDashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\Admin\\AdminDashboard.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\AdminDashboard.cshtml",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Admin\\AdminDashboard.cshtml",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\Admin\\AdminDashboard.cshtml",
               "RelativeToolTip": "Views\\Admin\\AdminDashboard.cshtml",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALUAAAAAAAAAAAApwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-24T20:27:09.412Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAABYBAAAAAAAAAAAvwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "NFLTeam.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Data\\Entities\\NFLTeam.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\NFLTeam.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Data\\Entities\\NFLTeam.cs",
+              "RelativeToolTip": "Data\\Entities\\NFLTeam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T20:32:21.218Z"
+              "WhenOpened": "2025-09-26T15:14:10.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\ApiCredentials\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\ApiCredentials\\Create.cshtml",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\ApiCredentials\\Create.cshtml",
+              "RelativeToolTip": "Views\\ApiCredentials\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-24T20:40:35.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\ApiCredentials\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\ApiCredentials\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\ApiCredentials\\Edit.cshtml",
+              "RelativeToolTip": "Views\\ApiCredentials\\Edit.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAtwDkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-24T19:20:09.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ApiCredential.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Data\\Entities\\ApiCredential.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\ApiCredential.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Data\\Entities\\ApiCredential.cs",
+              "RelativeToolTip": "Data\\Entities\\ApiCredential.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T18:28:47.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": ".env",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\.env",
+              "RelativeDocumentMoniker": ".env",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\.env",
+              "RelativeToolTip": ".env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-26T14:58:30.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ApiCredentialsViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Models\\ApiCredentialsViewModels.cs",
+              "RelativeDocumentMoniker": "Models\\ApiCredentialsViewModels.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Models\\ApiCredentialsViewModels.cs",
+              "RelativeToolTip": "Models\\ApiCredentialsViewModels.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAuwHwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T19:19:20.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA+wBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T15:11:27.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApiCredentialsController.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Controllers\\ApiCredentialsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ApiCredentialsController.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Controllers\\ApiCredentialsController.cs",
+              "RelativeToolTip": "Controllers\\ApiCredentialsController.cs",
+              "ViewState": "AgIAAJoBAAAAAAAAAAAvwOMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T19:19:32.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IApiCredentialTester.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\Testing\\IApiCredentialTester.cs",
+              "RelativeDocumentMoniker": "Services\\Testing\\IApiCredentialTester.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\Testing\\IApiCredentialTester.cs",
+              "RelativeToolTip": "Services\\Testing\\IApiCredentialTester.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T19:06:42.47Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
+              "Title": "EspnTester.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\Testing\\Testers\\EspnTester.cs",
+              "RelativeDocumentMoniker": "Services\\Testing\\Testers\\EspnTester.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\Testing\\Testers\\EspnTester.cs",
+              "RelativeToolTip": "Services\\Testing\\Testers\\EspnTester.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAcwBkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T19:07:03.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ApiCredentialTestService.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\Testing\\ApiCredentialTestService.cs",
+              "RelativeDocumentMoniker": "Services\\Testing\\ApiCredentialTestService.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\Testing\\ApiCredentialTestService.cs",
+              "RelativeToolTip": "Services\\Testing\\ApiCredentialTestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T19:06:47.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TesterBase.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\Testing\\Testers\\TesterBase.cs",
+              "RelativeDocumentMoniker": "Services\\Testing\\Testers\\TesterBase.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\Testing\\Testers\\TesterBase.cs",
+              "RelativeToolTip": "Services\\Testing\\Testers\\TesterBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T19:06:52.392Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DefaultTester.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\Testing\\Testers\\DefaultTester.cs",
+              "RelativeDocumentMoniker": "Services\\Testing\\Testers\\DefaultTester.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\Testing\\Testers\\DefaultTester.cs",
+              "RelativeToolTip": "Services\\Testing\\Testers\\DefaultTester.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T19:06:58.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GeminiTester.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\Testing\\Testers\\GeminiTester.cs",
+              "RelativeDocumentMoniker": "Services\\Testing\\Testers\\GeminiTester.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Services\\Testing\\Testers\\GeminiTester.cs",
+              "RelativeToolTip": "Services\\Testing\\Testers\\GeminiTester.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T19:07:07.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ApiCredentialCookie.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Data\\Entities\\ApiCredentialCookie.cs",
+              "RelativeDocumentMoniker": "Data\\Entities\\ApiCredentialCookie.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Data\\Entities\\ApiCredentialCookie.cs",
+              "RelativeToolTip": "Data\\Entities\\ApiCredentialCookie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T18:42:33.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\ApiCredentials\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ApiCredentials\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\ApiCredentials\\Index.cshtml",
+              "RelativeToolTip": "Views\\ApiCredentials\\Index.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwAAAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-24T20:48:52.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "OpenApiIngestionService.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Infrastructure\\ApiDocs\\OpenApiIngestionService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ApiDocs\\OpenApiIngestionService.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Infrastructure\\ApiDocs\\OpenApiIngestionService.cs",
+              "RelativeToolTip": "Infrastructure\\ApiDocs\\OpenApiIngestionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-24T21:28:08.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "APITypes.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\Entities\\APITypes.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Data\\Entities\\APITypes.cs",
               "RelativeDocumentMoniker": "Data\\Entities\\APITypes.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\Entities\\APITypes.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Data\\Entities\\APITypes.cs",
               "RelativeToolTip": "Data\\Entities\\APITypes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -391,11 +524,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 30,
               "Title": "GeminiController.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\GeminiController.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Controllers\\GeminiController.cs",
               "RelativeDocumentMoniker": "Controllers\\GeminiController.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\GeminiController.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Controllers\\GeminiController.cs",
               "RelativeToolTip": "Controllers\\GeminiController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -403,35 +536,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": ".env",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\.env",
-              "RelativeDocumentMoniker": ".env",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\.env",
-              "RelativeToolTip": ".env",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-09-24T19:17:55.388Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Data\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\Entities\\User.cs",
-              "RelativeToolTip": "Data\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T18:11:40.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Models\\RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Models\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "Models\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Models\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Models\\RegisterViewModel.cs",
               "RelativeToolTip": "Models\\RegisterViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -439,11 +548,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 31,
               "Title": "Account.cshtml",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Account\\Account.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\Account\\Account.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Account.cshtml",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Account\\Account.cshtml",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\Account\\Account.cshtml",
               "RelativeToolTip": "Views\\Account\\Account.cshtml",
               "ViewState": "AgIAACUAAAAAAAAAAAAwwDUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -451,27 +560,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Account\\Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\jason\\OneDrive\\Desktop\\git\\Authenticate\\Views\\Account\\Login.cshtml",
               "RelativeToolTip": "Views\\Account\\Login.cshtml",
               "ViewState": "AgIAACEAAAAAAAAAAAAswDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-18T15:35:42.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAuwJAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T15:11:27.829Z"
             }
           ]
         }

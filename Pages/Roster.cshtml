@@ -1,0 +1,58 @@
+@page
+@model Authenticate.Pages.RosterModel
+@{
+    ViewData["Title"] = "NFL Team Roster";
+    Layout = "_Layout";
+}
+
+<h1>NFL Team Roster</h1>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Team ID</th>
+            <th>Abbreviation</th>
+            <th>City</th>
+            <th>Name</th>
+            <th>Division</th>
+            <th>Conference</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Ties</th>
+            <th>Points For</th>
+            <th>Points Against</th>
+            <th>ESPN Logo</th>
+            <th>NFL.com Logo</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var team in Model.Teams)
+    {
+        <tr>
+            <td>@team.TeamID</td>
+            <td>@team.TeamAbv</td>
+            <td>@team.TeamCity</td>
+            <td>@team.TeamName</td>
+            <td>@team.Division</td>
+            <td>@team.Conference</td>
+            <td>@team.Wins</td>
+            <td>@team.Loss</td>
+            <td>@team.Tie</td>
+            <td>@team.Pf</td>
+            <td>@team.Pa</td>
+            <td>
+                @if (!string.IsNullOrEmpty(team.EspnLogo1))
+                {
+                    <img src="@team.EspnLogo1" alt="ESPN Logo" style="height:32px;" />
+                }
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(team.NflComLogo1))
+                {
+                    <img src="@team.NflComLogo1" alt="NFL.com Logo" style="height:32px;" />
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

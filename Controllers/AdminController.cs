@@ -296,5 +296,19 @@ namespace Authenticate.Controllers
 
             return RedirectToAction(nameof(AdminDashboard));
         }
+
+        // NEW: Sync NFL Teams
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SyncNFLTeams()
+        {
+            using var client = new HttpClient();
+            var response = await client.PostAsync($"{Request.Scheme}://{Request.Host}/api/Tank01/sync-nflteams", null);
+            if (response.IsSuccessStatusCode)
+                TempData["NFLTeamsSyncMessage"] = "NFL teams synced successfully.";
+            else
+                TempData["NFLTeamsSyncMessage"] = $"Sync failed: {await response.Content.ReadAsStringAsync()}";
+            return RedirectToAction("AdminDashboard");
+        }
     }
 }

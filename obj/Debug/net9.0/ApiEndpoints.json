@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "ContainingType": "Authenticate.Controllers.Tank01Controller",
+    "Method": "GetNFLTeams",
+    "RelativePath": "api/Tank01/nflteams",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Authenticate.Controllers.Tank01Controller",
+    "Method": "SyncNFLTeams",
+    "RelativePath": "api/Tank01/sync-nflteams",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
