@@ -10,11 +10,34 @@ using Authenticate.Infrastructure.Gemini;
 using Authenticate.Infrastructure.ApiDocs;
 using Authenticate.Services.Testing;
 
-// Load environment variables from .env file
-Env.Load();
+// Load environment variables from .env file (if it exists)
+if (File.Exists(".env"))
+{
+    Env.Load();
+}
 
-// Get connection string from environment
+// Get connection string from environment - build from individual PG variables or use DATABASE_URL/CONNECTION_STRING
 var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
+
+// If no CONNECTION_STRING, build from PostgreSQL environment variables
+if (string.IsNullOrEmpty(connectionString))
+{
+    var pgHost = Environment.GetEnvironmentVariable("PGHOST");
+    var pgPort = Environment.GetEnvironmentVariable("PGPORT");
+    var pgDatabase = Environment.GetEnvironmentVariable("PGDATABASE");
+    var pgUser = Environment.GetEnvironmentVariable("PGUSER");
+    var pgPassword = Environment.GetEnvironmentVariable("PGPASSWORD");
+    
+    if (!string.IsNullOrEmpty(pgHost) && !string.IsNullOrEmpty(pgDatabase) && 
+        !string.IsNullOrEmpty(pgUser) && !string.IsNullOrEmpty(pgPassword))
+    {
+        connectionString = $"Host={pgHost};Port={pgPort ?? "5432"};Database={pgDatabase};Username={pgUser};Password={pgPassword};SSLMode=Require";
+    }
+    else
+    {
+        connectionString = Environment.GetEnvironmentVariable("DATABASE_URL");
+    }
+}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -106,6 +129,13 @@ builder.Services.AddHttpClient<IGeminiMetadataClient, GeminiMetadataClient>(clie
 builder.Services.AddScoped<NFLTeamSyncService>();
 
 var app = builder.Build();
+
+// Apply pending migrations automatically on startup
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    context.Database.Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

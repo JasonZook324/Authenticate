@@ -1,6 +1,38 @@
-modules = ["dotnet-7.0", "web", "nodejs-20", "dotnet-9.0"]
+modules = ["dotnet-7.0", "web", "nodejs-20", "dotnet-9.0", "postgresql-16"]
 [agent]
 expertMode = true
 
 [nix]
 channel = "stable-25_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Server"
+
+[[workflows.workflow]]
+name = "Server"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "dotnet run --no-launch-profile --urls http://0.0.0.0:5000 --environment Development"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 37171
+externalPort = 3000
