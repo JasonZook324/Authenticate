@@ -36,3 +36,8 @@ externalPort = 80
 [[ports]]
 localPort = 37171
 externalPort = 3000
+
+[deployment]
+deploymentTarget = "autoscale"
+run = ["dotnet", "run", "--configuration", "Release", "--no-launch-profile", "--urls", "http://0.0.0.0:5000", "--environment", "Production"]
+build = ["dotnet", "build", "--configuration", "Release"]
