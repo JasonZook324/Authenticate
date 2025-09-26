@@ -1,0 +1,68 @@
+{
+    "statusCode": 200,
+    "body": {
+        "team": "CHI",
+        "roster": [
+            {
+                "fantasyProsLink": "https://www.fantasypros.com/nfl/players/jaquan-brisker.php",
+                "jerseyNum": "9",
+                "espnName": "Jaquan Brisker",
+                "cbsLongName": "Jaquan Brisker",
+                "yahooLink": "https://sports.yahoo.com/nfl/players/34003",
+                "sleeperBotID": "8323",
+                "fantasyProsPlayerID": "23719",
+                "lastGamePlayed": "20250921_DAL@CHI",
+                "espnLink": "https://www.espn.com/nfl/player/_/id/4570044/jaquan-brisker",
+                "yahooPlayerID": "34003",
+                "isFreeAgent": "False",
+                "pos": "S",
+                "school": "Penn State",
+                "teamID": "6",
+                "cbsShortName": "J. Brisker",
+                "injury": {
+                    "injReturnDate": "",
+                    "description": "",
+                    "injDate": "20240501",
+                    "designation": ""
+                },
+                "rotoWirePlayerIDFull": "jaquan-brisker-15958",
+                "rotoWirePlayerID": "15958",
+                "exp": "4",
+                "height": "6'1\"",
+                "espnHeadshot": "https://a.espncdn.com/i/headshots/nfl/players/full/4570044.png",
+                "espnID": "4570044",
+                "cbsPlayerIDFull": "3125469/jaquan-brisker",
+                "fRefID": "BrisJa01",
+                "weight": "204",
+                "team": "CHI",
+                "espnIDFull": "4570044/jaquan-brisker",
+                "bDay": "4/20/1999",
+                "age": "26",
+                "longName": "Jaquan Brisker",
+                "playerID": "4570044",
+                "stats": {
+                    "gamesPlayed": "3",
+                    "Defense": {
+                        "totalTackles": "17.0",
+                        "fumblesLost": "0.0",
+                        "defTD": "0.0",
+                        "fumbles": "0.0",
+                        "fumblesRecovered": "0.0",
+                        "twoPointConversionReturn": "0.0",
+                        "soloTackles": "13.0",
+                        "defensiveInterceptions": "0.0",
+                        "qbHits": "0.0",
+                        "tfl": "0.0",
+                        "passDeflections": "1.0",
+                        "sacks": "0.0"
+                    },
+                    "teamID": "6",
+                    "team": "CHI",
+                    "teamAbv": "CHI",
+                    "fantasyPointsDefault": {
+                        "standard": "0.0",
+                        "PPR": "0.0",
+                        "halfPPR": "0.0"
+                    }
+                }
+            },

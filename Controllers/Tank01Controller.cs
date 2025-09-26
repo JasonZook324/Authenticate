@@ -125,6 +125,29 @@ namespace Authenticate.Controllers
             await _db.SaveChangesAsync();
             return Ok("NFL teams synced successfully.");
         }
+
+        // GET: api/Tank01/team-roster/{teamAbv}
+        [HttpGet("team-roster/{teamAbv}")]
+        public async Task<IActionResult> GetTeamRoster(string teamAbv)
+        {
+            if (string.IsNullOrEmpty(teamAbv))
+                return BadRequest("Team abbreviation is required.");
+
+            var client = _httpClientFactory.CreateClient();
+            client.BaseAddress = new System.Uri(_baseUrl);
+            client.DefaultRequestHeaders.Add("x-rapidapi-key", _apiKey);
+
+            var endpoint = $"/getNFLTeamRoster?teamAbv={teamAbv}&getStats=true&fantasyPoints=true";
+            var response = await client.GetAsync(endpoint);
+
+            if (!response.IsSuccessStatusCode)
+                return StatusCode((int)response.StatusCode, await response.Content.ReadAsStringAsync());
+
+            var json = await response.Content.ReadAsStringAsync();
+            var rosterResponse = JsonSerializer.Deserialize<object>(json);
+
+            return Ok(rosterResponse);
+        }
     }
 
     // Models for deserialization

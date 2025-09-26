@@ -35,12 +35,13 @@
             <th>Points Against</th>
             <th>ESPN Logo</th>
             <th>NFL.com Logo</th>
+            <th>Roster</th>
         </tr>
     </thead>
     <tbody>
     @foreach (var team in Model)
     {
-        <tr>
+        <tr class="team-row" data-team-abv="@team.TeamAbv" style="cursor: pointer;">
             <td>@team.TeamID</td>
             <td>@team.TeamAbv</td>
             <td>@team.TeamCity</td>
@@ -64,7 +65,218 @@
                     <img src="@team.NflComLogo1" alt="NFL.com Logo" style="height:32px;" />
                 }
             </td>
+            <td>
+                <button class="btn btn-sm btn-outline-primary toggle-roster" data-team-abv="@team.TeamAbv">
+                    <span class="expand-text">View Roster</span>
+                    <span class="collapse-text" style="display:none;">Hide Roster</span>
+                </button>
+            </td>
+        </tr>
+        <tr class="roster-row" data-team-abv="@team.TeamAbv" style="display:none;">
+            <td colspan="14">
+                <div class="roster-container">
+                    <div class="loading-message" style="text-align: center; padding: 20px; display: none;">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                        <div>Loading roster...</div>
+                    </div>
+                    <div class="roster-content"></div>
+                </div>
+            </td>
         </tr>
     }
     </tbody>
 </table>
+
+<style>
+.roster-container {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 15px;
+    margin: 5px 0;
+}
+
+.player-card {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.player-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.player-headshot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.player-info h5 {
+    margin: 0;
+    color: #333;
+}
+
+.player-info .position {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.stats-section {
+    margin-top: 10px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+}
+</style>
+
+<script>
+$(document).ready(function() {
+    $('.toggle-roster').click(function(e) {
+        e.stopPropagation();
+        const teamAbv = $(this).data('team-abv');
+        const rosterRow = $(`.roster-row[data-team-abv="${teamAbv}"]`);
+        const button = $(this);
+        const expandText = button.find('.expand-text');
+        const collapseText = button.find('.collapse-text');
+        const loadingMessage = rosterRow.find('.loading-message');
+        const rosterContent = rosterRow.find('.roster-content');
+        
+        if (rosterRow.is(':visible')) {
+            // Hide roster
+            rosterRow.hide();
+            expandText.show();
+            collapseText.hide();
+            button.removeClass('btn-primary').addClass('btn-outline-primary');
+        } else {
+            // Show roster
+            rosterRow.show();
+            expandText.hide();
+            collapseText.show();
+            button.removeClass('btn-outline-primary').addClass('btn-primary');
+            
+            // Check if roster data already loaded
+            if (rosterContent.children().length === 0) {
+                // Load roster data
+                loadingMessage.show();
+                rosterContent.empty();
+                
+                $.ajax({
+                    url: `/api/Tank01/team-roster/${teamAbv}`,
+                    method: 'GET',
+                    success: function(data) {
+                        loadingMessage.hide();
+                        displayRosterData(data, rosterContent);
+                    },
+                    error: function(xhr, status, error) {
+                        loadingMessage.hide();
+                        rosterContent.html(`
+                            <div class="alert alert-danger">
+                                <strong>Error loading roster:</strong> ${error}
+                            </div>
+                        `);
+                    }
+                });
+            }
+        }
+    });
+});
+
+function displayRosterData(data, container) {
+    if (!data || !data.body || !data.body.roster) {
+        container.html('<div class="alert alert-warning">No roster data available.</div>');
+        return;
+    }
+    
+    const roster = data.body.roster;
+    let html = `<h5>Team ${data.body.team} Roster (${roster.length} players)</h5>`;
+    
+    roster.forEach(player => {
+        html += `
+            <div class="player-card">
+                <div class="player-header">
+                    ${player.espnHeadshot ? `<img src="${player.espnHeadshot}" alt="${player.longName}" class="player-headshot" onerror="this.style.display='none'">` : ''}
+                    <div class="player-info">
+                        <h5>${player.longName || 'N/A'}</h5>
+                        <div class="position">${player.pos || 'N/A'} #${player.jerseyNum || 'N/A'}</div>
+                        <small class="text-muted">${player.school || ''} | ${player.exp || 'N/A'} years exp | ${player.height || ''} | ${player.weight || ''} lbs</small>
+                    </div>
+                </div>
+                
+                ${player.stats ? `
+                    <div class="stats-section">
+                        <h6>2024 Season Stats</h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>Games Played:</strong> ${player.stats.gamesPlayed || '0'}
+                            </div>
+                            <div class="col-md-6">
+                                <strong>Fantasy Points:</strong> ${player.stats.fantasyPointsDefault?.standard || '0.0'}
+                            </div>
+                        </div>
+                        
+                        ${player.stats.Defense ? `
+                            <div class="mt-2">
+                                <strong>Defense:</strong>
+                                <div class="stat-row"><span>Total Tackles:</span><span>${player.stats.Defense.totalTackles || '0'}</span></div>
+                                <div class="stat-row"><span>Solo Tackles:</span><span>${player.stats.Defense.soloTackles || '0'}</span></div>
+                                <div class="stat-row"><span>Sacks:</span><span>${player.stats.Defense.sacks || '0'}</span></div>
+                                <div class="stat-row"><span>Interceptions:</span><span>${player.stats.Defense.defensiveInterceptions || '0'}</span></div>
+                                <div class="stat-row"><span>Pass Deflections:</span><span>${player.stats.Defense.passDeflections || '0'}</span></div>
+                            </div>
+                        ` : ''}
+                        
+                        ${player.stats.Passing ? `
+                            <div class="mt-2">
+                                <strong>Passing:</strong>
+                                <div class="stat-row"><span>Pass Attempts:</span><span>${player.stats.Passing.passAttempts || '0'}</span></div>
+                                <div class="stat-row"><span>Completions:</span><span>${player.stats.Passing.passCompletions || '0'}</span></div>
+                                <div class="stat-row"><span>Pass Yards:</span><span>${player.stats.Passing.passYards || '0'}</span></div>
+                                <div class="stat-row"><span>Pass TDs:</span><span>${player.stats.Passing.passTD || '0'}</span></div>
+                                <div class="stat-row"><span>Interceptions:</span><span>${player.stats.Passing.int || '0'}</span></div>
+                            </div>
+                        ` : ''}
+                        
+                        ${player.stats.Rushing ? `
+                            <div class="mt-2">
+                                <strong>Rushing:</strong>
+                                <div class="stat-row"><span>Rush Attempts:</span><span>${player.stats.Rushing.rushAttempts || '0'}</span></div>
+                                <div class="stat-row"><span>Rush Yards:</span><span>${player.stats.Rushing.rushYards || '0'}</span></div>
+                                <div class="stat-row"><span>Rush TDs:</span><span>${player.stats.Rushing.rushTD || '0'}</span></div>
+                            </div>
+                        ` : ''}
+                        
+                        ${player.stats.Receiving ? `
+                            <div class="mt-2">
+                                <strong>Receiving:</strong>
+                                <div class="stat-row"><span>Receptions:</span><span>${player.stats.Receiving.receptions || '0'}</span></div>
+                                <div class="stat-row"><span>Receiving Yards:</span><span>${player.stats.Receiving.recYards || '0'}</span></div>
+                                <div class="stat-row"><span>Receiving TDs:</span><span>${player.stats.Receiving.recTD || '0'}</span></div>
+                            </div>
+                        ` : ''}
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    });
+    
+    container.html(html);
+}
+</script>
