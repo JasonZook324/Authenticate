@@ -103,6 +103,8 @@ builder.Services.AddHttpClient<IGeminiMetadataClient, GeminiMetadataClient>(clie
     client.Timeout = TimeSpan.FromSeconds(15);
 });
 
+builder.Services.AddScoped<NFLTeamSyncService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -24,5 +24,6 @@ namespace Authenticate.Data
 
         // New
         public DbSet<ApiCredentialCookie> ApiCredentialCookies { get; set; }
+        public DbSet<NFLTeam> NFLTeams { get; set; }
     }
 }

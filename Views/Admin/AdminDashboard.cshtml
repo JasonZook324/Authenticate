@@ -194,6 +194,27 @@
             {
                 <div class="alert alert-light border">No API Types yet.</div>
             }
+
+            <!-- NFL Teams Sync Card -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <strong>NFL Teams Sync</strong>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="/Admin/SyncNFLTeams">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-primary">
+                            Sync NFL Teams
+                        </button>
+                    </form>
+                    @if (TempData["NFLTeamsSyncMessage"] is string syncMsg)
+                    {
+                        <div class="mt-2 alert alert-info">
+                            @syncMsg
+                        </div>
+                    }
+                </div>
+            </div>
         </div>
     </div>
 </div>

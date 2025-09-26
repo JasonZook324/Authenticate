@@ -17,85 +17,93 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Authenticate
 build_property.RootNamespace = Authenticate
-build_property.ProjectDir = C:\Users\64515C\source\repos\LEARNING\Authenticate\
+build_property.ProjectDir = C:\Users\jason\OneDrive\Desktop\git\Authenticate\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\64515C\source\repos\LEARNING\Authenticate
+build_property.MSBuildProjectDirectory = C:\Users\jason\OneDrive\Desktop\git\Authenticate
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Account/AccessDenied.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Pages/Roster.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9zdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Account/Account.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Account/Account.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2NvdW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Account/ForgotPassword.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Account/Register.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Account/ResetPassword.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Admin/AdminDashboard.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Admin/AdminDashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5EYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/ApiCredentials/Create.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/ApiCredentials/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBpQ3JlZGVudGlhbHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/ApiCredentials/Edit.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/ApiCredentials/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBpQ3JlZGVudGlhbHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/ApiCredentials/Index.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/ApiCredentials/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBpQ3JlZGVudGlhbHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Dashboard/Dashboard.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Dashboard/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Home/Index.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Home/Privacy.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Shared/Error.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Roster/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9zdGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Shared/_Layout.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/_ViewImports.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/_ViewStart.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Account/Login.cshtml]
+[C:/Users/jason/OneDrive/Desktop/git/Authenticate/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-x1yt9syf1l
