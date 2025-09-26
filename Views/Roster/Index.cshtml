@@ -148,60 +148,63 @@
 </style>
 
 <script>
-$(document).ready(function() {
-    $('.toggle-roster').click(function(e) {
-        e.stopPropagation();
-        const teamAbv = $(this).data('team-abv');
-        const rosterRow = $(`.roster-row[data-team-abv="${teamAbv}"]`);
-        const button = $(this);
-        const expandText = button.find('.expand-text');
-        const collapseText = button.find('.collapse-text');
-        const loadingMessage = rosterRow.find('.loading-message');
-        const rosterContent = rosterRow.find('.roster-content');
-        
-        if (rosterRow.is(':visible')) {
-            // Hide roster
-            rosterRow.hide();
-            expandText.show();
-            collapseText.hide();
-            button.removeClass('btn-primary').addClass('btn-outline-primary');
-        } else {
-            // Show roster
-            rosterRow.show();
-            expandText.hide();
-            collapseText.show();
-            button.removeClass('btn-outline-primary').addClass('btn-primary');
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButtons = document.querySelectorAll('.toggle-roster');
+    
+    toggleButtons.forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const teamAbv = this.getAttribute('data-team-abv');
+            const rosterRow = document.querySelector(`.roster-row[data-team-abv="${teamAbv}"]`);
+            const expandText = this.querySelector('.expand-text');
+            const collapseText = this.querySelector('.collapse-text');
+            const loadingMessage = rosterRow.querySelector('.loading-message');
+            const rosterContent = rosterRow.querySelector('.roster-content');
             
-            // Check if roster data already loaded
-            if (rosterContent.children().length === 0) {
-                // Load roster data
-                loadingMessage.show();
-                rosterContent.empty();
+            if (rosterRow.style.display !== 'none' && rosterRow.style.display !== '') {
+                // Hide roster
+                rosterRow.style.display = 'none';
+                expandText.style.display = '';
+                collapseText.style.display = 'none';
+                button.classList.remove('btn-primary');
+                button.classList.add('btn-outline-primary');
+            } else {
+                // Show roster
+                rosterRow.style.display = '';
+                expandText.style.display = 'none';
+                collapseText.style.display = '';
+                button.classList.remove('btn-outline-primary');
+                button.classList.add('btn-primary');
                 
-                $.ajax({
-                    url: `/api/Tank01/team-roster/${teamAbv}`,
-                    method: 'GET',
-                    success: function(data) {
-                        loadingMessage.hide();
-                        displayRosterData(data, rosterContent);
-                    },
-                    error: function(xhr, status, error) {
-                        loadingMessage.hide();
-                        rosterContent.html(`
-                            <div class="alert alert-danger">
-                                <strong>Error loading roster:</strong> ${error}
-                            </div>
-                        `);
-                    }
-                });
+                // Check if roster data already loaded
+                if (rosterContent.children.length === 0) {
+                    // Load roster data
+                    loadingMessage.style.display = 'block';
+                    rosterContent.innerHTML = '';
+                    
+                    fetch(`/api/Tank01/team-roster/${teamAbv}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            loadingMessage.style.display = 'none';
+                            displayRosterData(data, rosterContent);
+                        })
+                        .catch(error => {
+                            loadingMessage.style.display = 'none';
+                            rosterContent.innerHTML = `
+                                <div class="alert alert-danger">
+                                    <strong>Error loading roster:</strong> ${error.message}
+                                </div>
+                            `;
+                        });
+                }
             }
-        }
+        });
     });
 });
 
 function displayRosterData(data, container) {
     if (!data || !data.body || !data.body.roster) {
-        container.html('<div class="alert alert-warning">No roster data available.</div>');
+        container.innerHTML = '<div class="alert alert-warning">No roster data available.</div>';
         return;
     }
     
@@ -277,6 +280,6 @@ function displayRosterData(data, container) {
         `;
     });
     
-    container.html(html);
+    container.innerHTML = html;
 }
 </script>
