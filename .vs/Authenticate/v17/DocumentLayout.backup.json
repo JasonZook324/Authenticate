@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\controllers\\espncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\espncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\models\\espnapiplaygroundviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:models\\espnapiplaygroundviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\views\\espn\\playground.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\espn\\playground.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\controllers\\rostercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\rostercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\views\\roster\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\roster\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\models\\rosterviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:models\\rosterviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\views\\apicredentials\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\apicredentials\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -39,10 +63,6 @@
       "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\testers\\defaulttester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\services\\testing\\testers\\testerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:services\\testing\\testers\\testerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -57,10 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\data\\entities\\apicredentialcookie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\entities\\apicredentialcookie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\views\\apicredentials\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -87,10 +103,6 @@
       "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\geminicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:.env||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -109,6 +121,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:models\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\models\\apiplaygroundviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:models\\apiplaygroundviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\controllers\\playgroundcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:controllers\\playgroundcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|c:\\users\\64515c\\source\\repos\\learning\\authenticate\\views\\playground\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D8432D67-9DA1-4414-B309-A587F38CF783}|Authenticate.csproj|solutionrelative:views\\playground\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -118,7 +142,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -134,7 +158,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 31,
+              "Title": "PlaygroundController.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\PlaygroundController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PlaygroundController.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\PlaygroundController.cs",
+              "RelativeToolTip": "Controllers\\PlaygroundController.cs",
+              "ViewState": "AgIAAAwBAAAAAAAAAEBVwBABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T19:04:58.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ApiPlaygroundViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Models\\ApiPlaygroundViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ApiPlaygroundViewModel.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Models\\ApiPlaygroundViewModel.cs",
+              "RelativeToolTip": "Models\\ApiPlaygroundViewModel.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAEBUwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T19:03:13.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RosterController.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\RosterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RosterController.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\RosterController.cs",
+              "RelativeToolTip": "Controllers\\RosterController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAewMMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T12:04:24.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "IApiCredentialTester.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\IApiCredentialTester.cs",
               "RelativeDocumentMoniker": "Services\\Testing\\IApiCredentialTester.cs",
@@ -142,25 +204,49 @@
               "RelativeToolTip": "Services\\Testing\\IApiCredentialTester.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:06:42.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T19:06:42.47Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAvwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "EspnApiPlaygroundViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Models\\EspnApiPlaygroundViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\EspnApiPlaygroundViewModel.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Models\\EspnApiPlaygroundViewModel.cs",
+              "RelativeToolTip": "Models\\EspnApiPlaygroundViewModel.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T20:58:47.72Z",
+              "WhenOpened": "2025-10-03T19:36:02.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EspnController.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\EspnController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EspnController.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\EspnController.cs",
+              "RelativeToolTip": "Controllers\\EspnController.cs",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAUwNwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-03T19:35:53.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 32,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Playground\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Playground\\Index.cshtml",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Playground\\Index.cshtml",
+              "RelativeToolTip": "Views\\Playground\\Index.cshtml",
+              "ViewState": "AgIAAIoAAAAAAAAAAIBJwIwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-09T19:05:54.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ApiCredentialsController.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\ApiCredentialsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ApiCredentialsController.cs",
@@ -168,12 +254,48 @@
               "RelativeToolTip": "Controllers\\ApiCredentialsController.cs",
               "ViewState": "AgIAAJoBAAAAAAAAAAAvwOMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T19:19:32.992Z",
+              "WhenOpened": "2025-09-24T19:19:32.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Roster\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Roster\\Index.cshtml",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Roster\\Index.cshtml",
+              "RelativeToolTip": "Views\\Roster\\Index.cshtml",
+              "ViewState": "AgIAABkAAAAAAAAAAAAjwDwAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-26T12:04:32.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RosterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Models\\RosterViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\RosterViewModel.cs",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Models\\RosterViewModel.cs",
+              "RelativeToolTip": "Models\\RosterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAlwBIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T12:13:17.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Playground.cshtml",
+              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Espn\\Playground.cshtml",
+              "RelativeDocumentMoniker": "Views\\Espn\\Playground.cshtml",
+              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Espn\\Playground.cshtml",
+              "RelativeToolTip": "Views\\Espn\\Playground.cshtml",
+              "ViewState": "AgIAALAAAAAAAAAAAIBJwLIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-03T19:36:07.71Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "ApiCredential.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\Entities\\ApiCredential.cs",
               "RelativeDocumentMoniker": "Data\\Entities\\ApiCredential.cs",
@@ -181,12 +303,11 @@
               "RelativeToolTip": "Data\\Entities\\ApiCredential.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T18:28:47.535Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T18:28:47.535Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "ApiCredentialsViewModels.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Models\\ApiCredentialsViewModels.cs",
               "RelativeDocumentMoniker": "Models\\ApiCredentialsViewModels.cs",
@@ -194,12 +315,11 @@
               "RelativeToolTip": "Models\\ApiCredentialsViewModels.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAAAuwHwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T19:19:20.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T19:19:20.836Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\ApiCredentials\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\ApiCredentials\\Edit.cshtml",
@@ -207,12 +327,11 @@
               "RelativeToolTip": "Views\\ApiCredentials\\Edit.cshtml",
               "ViewState": "AgIAAAgAAAAAAAAAAAAtwDkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-24T19:20:09.706Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T19:20:09.706Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\ApiCredentials\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\ApiCredentials\\Create.cshtml",
@@ -220,12 +339,11 @@
               "RelativeToolTip": "Views\\ApiCredentials\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-24T20:40:35.092Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T20:40:35.092Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -233,12 +351,11 @@
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAcBAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-25T19:52:00.46Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T19:52:00.46Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "EspnTester.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\Testers\\EspnTester.cs",
               "RelativeDocumentMoniker": "Services\\Testing\\Testers\\EspnTester.cs",
@@ -246,12 +363,11 @@
               "RelativeToolTip": "Services\\Testing\\Testers\\EspnTester.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAcwBkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:07:03.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T19:07:03.119Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "ApiCredentialTestService.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\ApiCredentialTestService.cs",
               "RelativeDocumentMoniker": "Services\\Testing\\ApiCredentialTestService.cs",
@@ -259,12 +375,11 @@
               "RelativeToolTip": "Services\\Testing\\ApiCredentialTestService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:06:47.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T19:06:47.942Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "TesterBase.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\Testers\\TesterBase.cs",
               "RelativeDocumentMoniker": "Services\\Testing\\Testers\\TesterBase.cs",
@@ -272,12 +387,11 @@
               "RelativeToolTip": "Services\\Testing\\Testers\\TesterBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:06:52.392Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T19:06:52.392Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "DefaultTester.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\Testers\\DefaultTester.cs",
               "RelativeDocumentMoniker": "Services\\Testing\\Testers\\DefaultTester.cs",
@@ -285,12 +399,11 @@
               "RelativeToolTip": "Services\\Testing\\Testers\\DefaultTester.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:06:58.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T19:06:58.589Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "GeminiTester.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Services\\Testing\\Testers\\GeminiTester.cs",
               "RelativeDocumentMoniker": "Services\\Testing\\Testers\\GeminiTester.cs",
@@ -298,12 +411,11 @@
               "RelativeToolTip": "Services\\Testing\\Testers\\GeminiTester.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T19:07:07.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T19:07:07.506Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "ApiCredentialCookie.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\Entities\\ApiCredentialCookie.cs",
               "RelativeDocumentMoniker": "Data\\Entities\\ApiCredentialCookie.cs",
@@ -311,12 +423,11 @@
               "RelativeToolTip": "Data\\Entities\\ApiCredentialCookie.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T18:42:33.704Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-25T18:42:33.704Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\ApiCredentials\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\ApiCredentials\\Index.cshtml",
@@ -324,25 +435,11 @@
               "RelativeToolTip": "Views\\ApiCredentials\\Index.cshtml",
               "ViewState": "AgIAABEAAAAAAAAAAAAQwAAAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-24T20:48:52.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T20:48:52.291Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADgvxoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T19:19:02.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "OpenApiIngestionService.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Infrastructure\\ApiDocs\\OpenApiIngestionService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\ApiDocs\\OpenApiIngestionService.cs",
@@ -350,12 +447,11 @@
               "RelativeToolTip": "Infrastructure\\ApiDocs\\OpenApiIngestionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-24T21:28:08.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-24T21:28:08.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "AdminDashboard.cshtml",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Admin\\AdminDashboard.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\AdminDashboard.cshtml",
@@ -367,7 +463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
@@ -379,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "APITypes.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\Entities\\APITypes.cs",
               "RelativeDocumentMoniker": "Data\\Entities\\APITypes.cs",
@@ -391,7 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "GeminiController.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\GeminiController.cs",
               "RelativeDocumentMoniker": "Controllers\\GeminiController.cs",
@@ -403,19 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": ".env",
-              "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\.env",
-              "RelativeDocumentMoniker": ".env",
-              "ToolTip": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\.env",
-              "RelativeToolTip": ".env",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-09-24T19:17:55.388Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Data\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Data\\Entities\\User.cs",
@@ -427,7 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Models\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "Models\\RegisterViewModel.cs",
@@ -439,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "Account.cshtml",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Account\\Account.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Account.cshtml",
@@ -451,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
@@ -463,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\64515C\\source\\repos\\LEARNING\\Authenticate\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",

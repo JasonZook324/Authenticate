@@ -1,0 +1,140 @@
+@model Authenticate.Models.ApiPlaygroundViewModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "API Playground";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <h1 class="h4 mb-3">API Playground</h1>
+            <p class="text-muted">Experiment with any HTTP endpoint using your saved credentials.</p>
+
+            @if (!string.IsNullOrWhiteSpace(Model.Error))
+            {
+                <div class="alert alert-warning">@Model.Error</div>
+            }
+
+            <form method="post" action="/Playground" class="card p-3 shadow-sm" data-busy="Calling API…">
+                @Html.AntiForgeryToken()
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Credential</label>
+                        @Html.DropDownListFor(m => m.SelectedCredentialId, Model.AvailableCredentials, "-- optional --", new { @class = "form-select", id = "credSelect" })
+                        <script type="application/json" id="credTypeMap">@System.Text.Json.JsonSerializer.Serialize(Model.CredentialApiTypes)</script>
+                        <script type="application/json" id="credExtrasMap">@System.Text.Json.JsonSerializer.Serialize(Model.CredentialExtras)</script>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Apply Credential Auth</label>
+                        <div class="form-check mt-2">
+                            <input id="useCred" name="UseCredentialAuth" type="checkbox" class="form-check-input" value="true" @(Model.UseCredentialAuth ? "checked" : null) />
+                            <input type="hidden" name="UseCredentialAuth" value="false" />
+                            <label class="form-check-label" for="useCred">Use token/cookies/basic from credential</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Method</label>
+                        @Html.DropDownListFor(m => m.Method, new List<SelectListItem>{
+                            new SelectListItem{ Text = "GET", Value = "GET", Selected = Model.Method == "GET" },
+                            new SelectListItem{ Text = "POST", Value = "POST", Selected = Model.Method == "POST" },
+                            new SelectListItem{ Text = "PUT", Value = "PUT", Selected = Model.Method == "PUT" },
+                            new SelectListItem{ Text = "PATCH", Value = "PATCH", Selected = Model.Method == "PATCH" },
+                            new SelectListItem{ Text = "DELETE", Value = "DELETE", Selected = Model.Method == "DELETE" },
+                            new SelectListItem{ Text = "HEAD", Value = "HEAD", Selected = Model.Method == "HEAD" },
+                            new SelectListItem{ Text = "OPTIONS", Value = "OPTIONS", Selected = Model.Method == "OPTIONS" },
+                        }, new { @class = "form-select" })
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Base URL</label>
+                        @Html.TextBoxFor(m => m.BaseUrl, new { @class = "form-control", placeholder = "https://api.example.com", id = "baseUrl" })
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Endpoint Path</label>
+                        @Html.TextBoxFor(m => m.EndpointPath, new { @class = "form-control", placeholder = "/v1/models", id = "endpointPath" })
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Query</label>
+                        @Html.TextBoxFor(m => m.Query, new { @class = "form-control", placeholder = "foo=bar&baz=1", id = "queryBox" })
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Headers (one per line, Name: Value)</label>
+                        @Html.TextAreaFor(m => m.HeadersRaw, new { @class = "form-control", rows = 4, placeholder = "Authorization: Bearer ...\nX-Api-Key: ...", id = "headersBox" })
+                        <div class="form-text">Tip: For ESPN, use Cookie: SWID={"{"}swid{"}"}; espn_s2={"{"}espn_s2{"}"}</div>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Body (JSON)</label>
+                        @Html.TextAreaFor(m => m.BodyJson, new { @class = "form-control", rows = 6, placeholder = "{ }" })
+                    </div>
+
+                    <div class="col-12 d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Send</button>
+                        <a class="btn btn-outline-secondary" href="/Playground">Reset</a>
+                    </div>
+
+                    @if (!string.IsNullOrWhiteSpace(Model.ResolvedUrl))
+                    {
+                        <hr />
+                        <div class="col-12">
+                            <label class="form-label">Resolved URL</label>
+                            <input class="form-control" value="@Model.ResolvedUrl" readonly />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Status</label>
+                            <input class="form-control" value="@(Model.StatusCode?.ToString() ?? string.Empty)" readonly />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Elapsed</label>
+                            <input class="form-control" value="@(Model.ElapsedMs?.ToString() ?? string.Empty) ms" readonly />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Response Headers</label>
+                            <pre class="bg-light p-2 border" style="white-space:pre-wrap">@Model.ResponseHeaders</pre>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Response Body</label>
+                            <pre class="bg-light p-2 border" style="white-space:pre-wrap">@(!string.IsNullOrWhiteSpace(Model.ResponseBodyPretty) ? Model.ResponseBodyPretty : Model.ResponseBody)</pre>
+                        </div>
+                    }
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(){
+  const credSel = document.getElementById('credSelect');
+  const headersBox = document.getElementById('headersBox');
+  const baseUrl = document.getElementById('baseUrl');
+  const endpointPath = document.getElementById('endpointPath');
+  const queryBox = document.getElementById('queryBox');
+  const typeMap = JSON.parse(document.getElementById('credTypeMap')?.textContent || '{}');
+  const extrasMap = JSON.parse(document.getElementById('credExtrasMap')?.textContent || '{}');
+
+  function autoFillForEspn(){
+    const id = credSel.value;
+    const apiName = (typeMap[id] || '').toLowerCase();
+    if (!apiName.includes('espn')) return;
+    const ex = extrasMap[id] || {};
+
+    // Only set fields if empty, to avoid clobbering manual edits
+    if (!baseUrl.value || baseUrl.value.trim().length === 0){
+      baseUrl.value = ex.baseUrl || 'https://lm-api-reads.fantasy.espn.com';
+    }
+    if (!endpointPath.value || endpointPath.value.trim().length === 0){
+      endpointPath.value = '/apis/v3/games/ffl/seasons/{seasonId}/segments/0/leagues/{leagueId}';
+    }
+    if (!queryBox.value || queryBox.value.trim().length === 0){
+      queryBox.value = 'view=mRoster';
+    }
+    if (!headersBox.value || headersBox.value.trim().length === 0){
+      headersBox.value = 'Cookie: SWID={{swid}}; espn_s2={{espn_s2}}';
+    }
+  }
+
+  credSel?.addEventListener('change', autoFillForEspn);
+  autoFillForEspn();
+})();
+</script>

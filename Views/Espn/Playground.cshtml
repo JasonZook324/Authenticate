@@ -1,0 +1,187 @@
+@model Authenticate.Models.EspnApiPlaygroundViewModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "ESPN API Playground";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <h1 class="h4 mb-3">ESPN API Playground</h1>
+            <p class="text-muted">Experiment with ESPN endpoints using your saved cookies and league data.</p>
+
+            @if (!string.IsNullOrWhiteSpace(Model.Error))
+            {
+                <div class="alert alert-warning">@Model.Error</div>
+            }
+
+            <form method="get" action="/Espn/Playground" class="card p-3 shadow-sm mb-3">
+                <div class="row g-2 align-items-end">
+                    <div class="col-md-6">
+                        <label class="form-label">ESPN Credential</label>
+                        @Html.DropDownListFor(m => m.SelectedCredentialId, Model.AvailableCredentials, "-- choose --", new { @class = "form-select" })
+                    </div>
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-outline-primary w-100">Load</button>
+                    </div>
+                </div>
+            </form>
+
+            <form method="post" action="/Espn/Playground" class="card p-3 shadow-sm" data-busy="Calling ESPN…">
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.SelectedCredentialId)
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Base URL</label>
+                        @Html.TextBoxFor(m => m.BaseUrl, new { @class = "form-control", placeholder = "https://lm-api-reads.fantasy.espn.com" })
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Season Id</label>
+                        @Html.TextBoxFor(m => m.SeasonId, new { @class = "form-control", placeholder = "2025" })
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">League Id</label>
+                        @Html.TextBoxFor(m => m.LeagueId, new { @class = "form-control", placeholder = "123456" })
+                    </div>
+
+                    <div class="col-md-9">
+                        <label class="form-label">Endpoint Path</label>
+                        @Html.TextBoxFor(m => m.EndpointPath, new { @class = "form-control", placeholder = "/apis/v3/games/ffl/seasons/{seasonId}/segments/0/leagues/{leagueId}" })
+                        <div class="form-text">Tokens {seasonId} and {leagueId} will be replaced.</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Query</label>
+                        @Html.TextBoxFor(m => m.Query, new { @class = "form-control", placeholder = "view=mRoster" })
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Method</label>
+                        @Html.DropDownListFor(m => m.Method,
+                            new List<SelectListItem> {
+                                new SelectListItem { Text = "GET", Value = "GET", Selected = Model.Method == "GET" },
+                                new SelectListItem { Text = "POST", Value = "POST", Selected = Model.Method == "POST" },
+                                new SelectListItem { Text = "HEAD", Value = "HEAD", Selected = Model.Method == "HEAD" },
+                            },
+                            new { @class = "form-select" })
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-label">Body (JSON, POST only)</label>
+                        @Html.TextAreaFor(m => m.BodyJson,  new { @class = "form-control", rows = "4", placeholder = "{ }" })
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-check mb-2">
+                            <input id="useCred" class="form-check-input" type="checkbox" name="UseCredentialCookies" value="true" @(Model.UseCredentialCookies ? "checked" : null) />
+                            <input type="hidden" name="UseCredentialCookies" value="false" />
+                            <label class="form-check-label" for="useCred">Use cookies from selected credential</label>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <label class="form-label">SWID (optional)</label>
+                                @Html.TextBoxFor(m => m.SWID, new { @class = "form-control", placeholder = "{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}" })
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">espn_s2 (optional)</label>
+                                @Html.TextBoxFor(m => m.EspnS2, new { @class = "form-control", placeholder = "long-token" })
+                            </div>
+                            <div class="form-text">If provided, these override/augment the Cookie header (SWID=…; espn_s2=…).</div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Send</button>
+                        <a class="btn btn-outline-secondary" href="/Espn/Playground@(Model.SelectedCredentialId.HasValue ? $"?credId={Model.SelectedCredentialId}" : "")">Reset</a>
+                    </div>
+
+                    @if (!string.IsNullOrWhiteSpace(Model.ResolvedUrl))
+                    {
+                        <hr />
+                        <div class="col-12">
+                            <label class="form-label">Resolved URL</label>
+                            <input class="form-control" value="@Model.ResolvedUrl" readonly />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Status</label>
+                            <input class="form-control" value="@(Model.StatusCode?.ToString() ?? "")" readonly />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Elapsed</label>
+                            <input class="form-control" value="@(Model.ElapsedMs?.ToString() ?? "") ms" readonly />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Response Headers</label>
+                            <pre class="bg-light p-2 border" style="white-space:pre-wrap">@Model.ResponseHeaders</pre>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <label class="form-label mb-0">Response JSON Explorer</label>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="collapse" data-bs-target="#jsonExplorer">Toggle</button>
+                            </div>
+                            <div id="jsonExplorer" class="collapse show">
+                                <div id="jsonTree" class="border rounded p-2 bg-light"></div>
+                            </div>
+                            <script>
+                            (function(){
+                              const pretty = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.ResponseBodyPretty ?? Model.ResponseBody ?? ""));
+                              if (!pretty) return;
+                              let data;
+                              try { data = JSON.parse(pretty); } catch { return; }
+                              const root = document.getElementById('jsonTree');
+                              function createNode(key, value){
+                                const type = Object.prototype.toString.call(value).slice(8,-1);
+                                const li = document.createElement('div');
+                                li.className = 'json-node';
+                                const hasChildren = (type === 'Object' && Object.keys(value).length) || (type === 'Array' && value.length);
+                                const header = document.createElement('div');
+                                header.className = 'd-flex align-items-center';
+                                const toggle = document.createElement('button');
+                                toggle.type = 'button';
+                                toggle.className = 'btn btn-sm btn-link px-1';
+                                toggle.setAttribute('aria-expanded', 'false');
+                                toggle.dataset.open = 'false';
+                                toggle.textContent = hasChildren ? '?' : '•';
+                                const title = document.createElement('span');
+                                title.innerHTML = `<strong>${key ?? '(root)'}:</strong> <span class="text-muted">${type}</span>${!hasChildren ? ' = ' + escapeHtml(JSON.stringify(value)) : ''}`;
+                                header.appendChild(toggle);
+                                header.appendChild(title);
+                                li.appendChild(header);
+                                let body;
+                                if (hasChildren){
+                                  body = document.createElement('div');
+                                  body.className = 'ms-3';
+                                  const entries = type === 'Array' ? value.map((v,i)=>[i,v]) : Object.entries(value);
+                                  for (const [k,v] of entries){
+                                    body.appendChild(createNode(k, v));
+                                  }
+                                  // start collapsed
+                                  body.style.display = 'none';
+                                  li.appendChild(body);
+                                  toggle.addEventListener('click', (e)=>{
+                                    e.preventDefault();
+                                    e.stopPropagation();
+                                    const isOpen = toggle.dataset.open === 'true';
+                                    toggle.dataset.open = (!isOpen).toString();
+                                    toggle.setAttribute('aria-expanded', (!isOpen).toString());
+                                    toggle.textContent = isOpen ? '?' : '?';
+                                    body.style.display = isOpen ? 'none' : 'block';
+                                  });
+                                }
+                                return li;
+                              }
+                              function escapeHtml(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+                              root.innerHTML = '';
+                              root.appendChild(createNode(null, data));
+                            })();
+                            </script>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label class="form-label">Raw Response</label>
+                            <pre class="bg-light p-2 border" style="white-space:pre-wrap">@(!string.IsNullOrWhiteSpace(Model.ResponseBodyPretty) ? Model.ResponseBodyPretty : Model.ResponseBody)</pre>
+                        </div>
+                    }
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

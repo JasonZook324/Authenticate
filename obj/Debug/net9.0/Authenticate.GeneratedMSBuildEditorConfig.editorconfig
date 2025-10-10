@@ -68,12 +68,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Espn/Playground.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwblxQbGF5Z3JvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Playground/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWdyb3VuZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Roster/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9zdGVyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/64515C/source/repos/LEARNING/Authenticate/Views/Shared/Error.cshtml]

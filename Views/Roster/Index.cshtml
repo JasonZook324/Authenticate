@@ -1,0 +1,61 @@
+@model Authenticate.Models.RosterViewModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "My Roster";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="h4 mb-3">My Roster</h1>
+            <p class="text-muted">Select your team and view the current lineup.</p>
+
+            @if (!string.IsNullOrWhiteSpace(Model.Error))
+            {
+                <div class="alert alert-warning">@Model.Error</div>
+            }
+
+            <form method="post" action="/Roster" class="card p-3 shadow-sm mb-3" data-busy="Loading…">
+                @Html.AntiForgeryToken()
+                <div class="mb-3">
+                    <label for="team" class="form-label">Team</label>
+                    @Html.DropDownListFor(m => m.TeamId, Model.Teams, "-- Select team --", new { @class = "form-select", id = "team" })
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary" @(Model.Teams.Count == 0 ? "disabled" : null)>Load roster</button>
+                    <a class="btn btn-outline-secondary" href="/">Cancel</a>
+                </div>
+            </form>
+
+            @if (Model.RosterEntries != null && Model.RosterEntries.Count > 0)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        Roster for @Model.SelectedTeamName
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-sm mb-0">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 20%">Slot</th>
+                                        <th>Player</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var r in Model.RosterEntries)
+                                    {
+                                        <tr>
+                                            <td>@r.Slot</td>
+                                            <td>@r.PlayerName</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
